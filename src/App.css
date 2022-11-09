@@ -7,10 +7,15 @@
   --green3 : #C2CAC1;
   --white : #EFF5F5;
   --black : #393E46;
+  --gray : #D9D9D9;
 }
 
 * {
   font-family: 'Poppins', sans-serif;
+}
+
+.green-text-link {
+  color: var(--green1);
 }
 
 body, html {
@@ -76,3 +81,79 @@ body, html {
 
 /*-- Login Page --*/
 
+.login-main {
+  height: 100vh;
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-side-login {
+  width: 45%;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--green1);
+  height: 100vh;
+}
+
+.left-side-login img {
+  width: 400px;
+  height: auto;
+}
+
+.greeting-login {
+  margin-top: 20vh;
+}
+
+.right-side-login {
+  width: 55%;
+  text-align: center;
+  color: var(--green1);
+}
+
+.form-login {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.form-login form {
+  text-align: left;
+  color: var(--black);
+}
+
+.input-column {
+  width: 97%;
+  margin: auto;
+  padding: 1em;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--gray);
+}
+
+.btn-login-register {
+  width: 100%;
+  margin: auto;
+  padding: 1em;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--green1);
+  color: var(--white);
+}
+
+.btn-login-register:hover {
+  cursor: pointer;
+} 
+
+/*-- Login Page --*/
+
+/*-- SignIn Page --*/
+
+
+
+/*-- SignIn Page --*/
