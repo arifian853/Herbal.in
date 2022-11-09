@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { LandingPage } from './components/LandingPage/LandingPage';
+import { LoginPage } from './components/Login/LoginPage';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Selamat Datang di Herbal.in !
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Selamat Datang
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/login" element={<LoginPage />} />    
+      </Routes>
     </div>
   );
 }

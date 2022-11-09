@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --green4 : #425F57;
+  --green1 : #749F82;
+  --green2 : #C0EFB8;
+  --green3 : #C2CAC1;
+  --white : #EFF5F5;
+  --black : #393E46;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*-- Landing Page --*/
+
+.main {
+  height: 100vh;
+  background-color: var(--green1);
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 1em;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.left-landing {
+  padding: 1em;
+  width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.greeting {
+  margin: 0 auto;
+  width: 50%;
 }
+
+.greeting img {
+  width: 200px;
+  height: auto;
+}
+
+.right-landing {
+  padding: 1em;
+  text-align: center;
+  width: 40%;
+}
+
+.right-landing button {
+  background-color: var(--green4);
+  color: var(--white);
+  padding: 1em;
+  width: 40%;
+  text-align: center;   
+  border: none;
+  border-radius: 1em;
+}
+
+.right-landing button:hover {
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/*-- Landing Page --*/
+
+
+/*-- Login Page --*/
+
