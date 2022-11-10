@@ -68,12 +68,11 @@ body, html {
   width: 40%;
   text-align: center;   
   border: none;
-  border-radius: 1em;
+  border-radius: 7px;
 }
 
 .right-landing button:hover {
   cursor: pointer;
-  transition: 0.4s;
 }
 
 /*-- Landing Page --*/
@@ -102,12 +101,12 @@ body, html {
 }
 
 .left-side-login img {
-  width: 400px;
+  width: 350px;
   height: auto;
 }
 
 .greeting-login {
-  margin-top: 20vh;
+  margin-top: 15vh;
 }
 
 .right-side-login {
@@ -128,7 +127,7 @@ body, html {
 }
 
 .input-column {
-  width: 97%;
+  width: 95%;
   margin: auto;
   padding: 1em;
   border: none;
@@ -137,8 +136,8 @@ body, html {
 }
 
 .btn-login-register {
-  width: 100%;
-  margin: auto;
+  width: 99%;
+  margin: 0 auto;
   padding: 1em;
   border: none;
   border-radius: 7px;
@@ -157,3 +156,17 @@ body, html {
 
 
 /*-- SignIn Page --*/
+
+/*-- Terms and Service Page --*/
+
+.terms {
+  background-color: var(--white);
+  color: var(--black);
+  width: 20em;
+  margin : 0 auto;
+  padding: 1em;
+  text-align: center;
+  border-radius : 7px;
+}
+
+/*-- Terms and Service Page --*/

@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export const LandingPage = () => {
   return (
     <div>
+         <Helmet>
+            <title>Herbal.in - Home</title>
+        </Helmet>
         <div className="main">
-
+       
             <div className="left-landing">
                 <div className="greeting">
                     <img src="../Assets/herb.png" alt="" />
@@ -17,8 +21,11 @@ export const LandingPage = () => {
             </div>
             
             <div className="right-landing">
+                <br />
+                <br />
+                <br />
                 <Link to="/login">
-                <button>Lebih lengkap</button>
+                <button>Selengkapnya</button>
                 </Link>
             </div>
 
