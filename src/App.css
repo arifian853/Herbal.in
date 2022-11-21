@@ -162,7 +162,7 @@ body, html {
 .terms {
   background-color: var(--white);
   color: var(--black);
-  width: 20em;
+  width: 40em;
   margin : 0 auto;
   padding: 1em;
   text-align: center;
@@ -170,3 +170,15 @@ body, html {
 }
 
 /*-- Terms and Service Page --*/
+
+/*-- Not Found Page --*/
+.not-found {
+  background-color: var(--white);
+  color: var(--black);
+  width: 40em;
+  margin : 0 auto;
+  padding: 1em;
+  text-align: center;
+  border-radius : 7px;
+}
+/*-- Not Found Page --*/

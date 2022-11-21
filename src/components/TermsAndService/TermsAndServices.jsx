@@ -6,16 +6,16 @@ export const TermsAndServices = () => {
   return (
     <div className='main'>
       <Helmet>
-            <title>Herbal.in - Terms & Service</title>
+            <title>Herbal.in - Syarat dan Ketentuan</title>
         </Helmet>
       <div className="terms">
-        <h1>404 NOT FOUND</h1>
+        <h1>Syarat dan Ketentuan</h1>
         <hr />
-        <p>There's nothing here yet. Coming Soon !</p>
+        <p>Belum ada :)</p>
         <hr />
         <br />
         <Link to="/">
-          <button className='btn-login-register'>Back to Home</button>
+          <button className='btn-login-register'>Kembali ke halaman utama</button>
         </Link>
       </div>
     </div>
