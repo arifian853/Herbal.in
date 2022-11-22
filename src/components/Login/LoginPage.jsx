@@ -1,8 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useUserAuth } from '../../context/UserAuthContext';
+import toast, { Toaster } from 'react-hot-toast';
 
 export const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { loginFunc } = useUserAuth();
+
+  const navigateAfter = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+        await loginFunc(email, password);
+        navigateAfter('/dashboard');
+    }catch (err) {
+        setError(err.message);
+    }
+  }
+
+  useEffect(() => {
+    if(error) {
+        toast.error(`${error}`, {
+            position: "top-right"
+        });
+    } 
+  }, [error])
+//   const successNotify = () => {
+//     toast.success(`Login berhasil, selamat datang`, {
+//         position: "top-right"
+//     })
+//     }
   return (
     <div className='login-main'>
         <Helmet>
@@ -18,11 +49,12 @@ export const LoginPage = () => {
         <div className="right-side-login">
              <h1>Login</h1>
             <div className="form-login">
-                <form action="submit">
+                <form onSubmit={handleSubmit}>
+                    <Toaster />
                     <label>Email</label><br />
-                    <input className='input-column' type="email" name="" id="" placeholder='Masukkan Email'/><br /> <br />
+                    <input className='input-column' type="email" name="" id="" placeholder='Masukkan Email' onChange={(e) => setEmail(e.target.value)}/><br /> <br />
                     <label>Kata Sandi</label>
-                    <input className='input-column'  type="password" name="" id="" placeholder='Masukkan Kata Sandi '/>
+                    <input className='input-column'  type="password" name="" id="" placeholder='Masukkan Kata Sandi ' onChange={(e) => setPassword(e.target.value)}/>
                     <br /> <p> Ingat saya <input type="checkbox" name="" id="" /></p>
                     <button className='btn-login-register'>Login</button>
                     <p>Belum punya akun ? <Link to="/signup"><span className='green-text-link'><u>Daftar disini</u></span></Link></p>
