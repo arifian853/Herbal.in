@@ -182,3 +182,154 @@ body, html {
   border-radius : 7px;
 }
 /*-- Not Found Page --*/
+
+/*checkout page*/
+.checkout-container{  
+  max-width: 1440px;  
+  max-height: 1024px;  
+}
+
+.checkout-container h1{  
+  font-weight: bold;  
+  font-size: 40px;
+}
+
+.checkout-content{
+  position: absolute;
+  width: 1240px;
+  height: 686px;
+  left: 99px;
+  top: 141px;
+  width: 80%;  
+}
+
+.checkout-form{
+  padding: 16px;
+  background: #C2CAC1;
+}
+
+.checkout-content .checkout-name{
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-content .checkout-name .checkout-Fname{
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.checkout-content .checkout-name .checkout-Lname{
+  display: flex;
+  flex-direction: column;
+  padding-left: 46px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.checkout-content .checkout-name #fname{
+  margin-top: -20px;
+  width: 361px;
+  height: 54px;
+  border: none;
+  background: #C1ACAC;
+}
+
+.checkout-content .checkout-name #lname{
+  margin-top: -20px;
+  width: 348px;
+  height: 54px;
+  border: none;
+  background: #C1ACAC;
+}
+
+.checkout-content .checkout-country{
+  display: flex;
+  flex-direction: row;
+}
+
+.checkout-content .checkout-country .checkout-region{
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.checkout-content .checkout-country .checkout-city{
+  display: flex;
+  flex-direction: column;
+  padding-left: 46px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.checkout-content .checkout-country #country{
+  margin-top: -20px;
+  width: 361px;
+  height: 54px;
+  border: none;
+  background: #C1ACAC;
+}
+
+.checkout-content .checkout-country #city{
+  margin-top: -20px;
+  width: 348px;
+  height: 54px;
+  border: none;
+  background: #C1ACAC;
+}
+
+.checkout-content .checkout-address{
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;  
+}
+
+.checkout-content .checkout-address #address{
+  width: 764px;
+  height: 166px;
+  margin-top: 20px;
+  border: none;
+  background: #C1ACAC;
+}
+
+.checkout-content .checkout-postal{
+  display: flex;
+  flex-direction: row;  
+  margin-top: 24px;
+  justify-content: space-between;  
+}
+
+.checkout-content .checkout-postal #postal{
+  width: 361px;
+  height: 54px;
+  border: none;
+  background: #C1ACAC;
+}
+
+.checkout-content button{  
+  width: 20%;  
+  background: #3EF07B; 
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 44px;
+  text-align: center;
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
