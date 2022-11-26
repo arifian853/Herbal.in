@@ -2,14 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import HerbalinMainProd from "../components/HerbalinMainProd";
+import CurrencyFormat from "react-currency-format";
 
-
-function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter }){
+function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading }){
 
     const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
     const ctgFilteredProducts = productItems.filter((productItem) => productItem.product_ctg === selectedFilter);
     const searchFilteredProducts = ctgFilteredProducts.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
 
+
+    if(loading){
+        return (
+            <div className="loading">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+        )
+    }
 
     return (
 
@@ -32,7 +40,7 @@ function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, sele
 
                             <p className="prod-item__ctg">{productItem.product_ctg}</p>
                             <p className="prod-item__name"><Link to={`/products/${productItem.id}`}>{productItem.product_name}</Link></p>
-                            <p className="prod-item__price">Price : Rp. {productItem.product_price}</p>
+                            <p className="prod-item__price">Price : <CurrencyFormat value={productItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /></p>
                             <p className="prod-item__desc">{productItem.product_desc}</p>
 
                             <div className="add-to-cart">
@@ -52,7 +60,7 @@ function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, sele
 
                             <p className="prod-item__ctg">{productItem.product_ctg}</p>
                             <p className="prod-item__name"><Link to={`/products/${productItem.id}`}>{productItem.product_name}</Link></p>
-                            <p className="prod-item__price">Price : Rp. {productItem.product_price}</p>
+                            <p className="prod-item__price">Price : <CurrencyFormat value={productItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /></p>
                             <p className="prod-item__desc">{productItem.product_desc}</p>
 
                             <div className="add-to-cart">

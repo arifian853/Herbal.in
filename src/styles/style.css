@@ -23,6 +23,80 @@ a:-webkit-any-link {
 }
 
 
+/* Loading */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #a3f630;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+
 /* Herbalin App */
 
 .herbalin-app .herbalin-app__header {
@@ -238,15 +312,20 @@ a:-webkit-any-link {
     padding: 6px;
     text-align: center;
     color: #eaeaea;
-    /* background-color: #4280DC; */
-    background-color: #509d69;
+    /* background-color: #54BAB9; */
 }
 
 .add-to-cart .product-item__addToCart {
     border: 0;
+    padding: 5px 12px;
     font-size: 17px;
-    background-color: transparent;
+    background-color: #509d69;
     color: #eaeaea;
+}
+
+.add-to-cart .product-item__addToCart:hover {
+    color: #97cfa9;
+    cursor: pointer;
 }
 
 
@@ -260,6 +339,15 @@ a:-webkit-any-link {
 .cart-page {
     width: 70%;
     margin: 30px auto;
+}
+
+.cart-page .clear-all-button {
+    padding: 5px 10px;
+    background-color: rgb(245, 100, 100);
+    color: whitesmoke;
+    border: transparent;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .cart-item {
@@ -291,7 +379,14 @@ a:-webkit-any-link {
 
 .cart-item button {
     width: 30px;
-    height: 20px;
+    height: 25px;
+    background-color: #97cfa9;
+    border: transparent;
+}
+
+.cart-item button:hover {
+    cursor: pointer;
+    color: #749F82;
 }
 
 .total-price-per-item-text {
@@ -314,6 +409,36 @@ a:-webkit-any-link {
 
 .remove-item button {
     width: 35px;
+}
+
+.total-price-all-items {
+    display: flex;
+    justify-content: right;
+}
+
+
+/* Cart Badge */
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+
+#lblCartCount {
+    font-size: 12px;
+    background: #CFFF8D;
+    color: black;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -3px;
 }
 
 

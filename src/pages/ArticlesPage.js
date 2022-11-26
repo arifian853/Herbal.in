@@ -22,8 +22,8 @@ function ArticlesPage(){
 
     if(loading){
         return (
-            <div className="loading-element">
-                <p>Loading ...</p>
+            <div className="loading">
+                <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </div>
         )
     }

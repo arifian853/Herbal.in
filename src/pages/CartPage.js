@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { MdOutlineDeleteOutline } from "react-icons/md";
-var CurrencyFormat = require('react-currency-format');
+import CurrencyFormat from "react-currency-format";
 
 function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler, onClearCartHandler }) {
 
@@ -13,7 +13,7 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
                 cartItems.length === 0 ? <div>No items here</div> : 
             
             <>
-                <button onClick={() => onClearCartHandler()}>Clear All</button>
+                <button className="clear-all-button" onClick={() => onClearCartHandler()}>Clear All</button>
 
                 {cartItems.map((cartItem) => (
                     <div key={cartItem.id} className="cart-item">
@@ -28,20 +28,20 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
 
                         <div className="cart-item-button-group">
                     
-                        <button onClick={() => onRemoveHandler(cartItem)}> - </button>
-                            <p className="cart-item__qty">{cartItem.product_qty}</p>
+                            <button onClick={() => onRemoveHandler(cartItem)}> - </button>
+                                <p className="cart-item__qty">{cartItem.product_qty}</p>
 
-                    
-                        <button onClick={() => onAddHandler(cartItem)}> + </button>
+                        
+                            <button onClick={() => onAddHandler(cartItem)}> + </button>
 
                         </div>
 
                         <div className="total-price-per-item-text">
-                            {cartItem.product_qty} x Rp. {cartItem.product_price}
+                            {cartItem.product_qty} x <CurrencyFormat value={cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} />
                         </div>
 
                         <div className="total-price-per-item">
-                            Rp. {cartItem.product_qty * cartItem.product_price}
+                            <CurrencyFormat value={cartItem.product_qty * cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /> 
                         </div>
 
                         <div className="remove-item">
@@ -50,9 +50,11 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
                     </div>
                 ))}
 
-                <div>
-                    Total :   
-                    <CurrencyFormat value={cartItems.reduce((prevItem, currentItem) => prevItem + currentItem.product_qty * currentItem.product_price, 0 )} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} />
+                <div className="total-price-all-items">
+                    <p>
+                        Total :   
+                        <CurrencyFormat value={cartItems.reduce((prevItem, currentItem) => prevItem + currentItem.product_qty * currentItem.product_price, 0 )} displayType={'text'} thousandSeparator={true} prefix={'  Rp. '} />
+                    </p>
                 </div>
             </> 
             

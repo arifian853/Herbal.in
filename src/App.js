@@ -12,7 +12,7 @@ import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
 
 function App() {
-    
+    const [loading, setLoading] = React.useState(true);
     const [ productItems, setProductItems ] = React.useState([]);
     const [ cartItems, setCartItems ] = React.useState([]);
     const [ searchParams, setSearchParams ] = useSearchParams();
@@ -25,7 +25,12 @@ function App() {
     React.useEffect(() => {
         getAllProducts().then(({ data }) => {
             setProductItems(data);
+            setLoading(false);
         });
+
+        return () => {
+            setLoading(true);
+        }
     }, []);
 
     function onKeywordChangeHandler(keyword) {
@@ -81,7 +86,7 @@ function App() {
                     <Route path="/" element={<HomePage onAddHandler={onAddHandler} />} />
                     <Route path="/articles" element={<ArticlesPage />} />
                     <Route path="/articles/:id" element={<ArticlesDetailPageWrapper />} />
-                    <Route path="/products" element={<ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} />}></Route>
+                    <Route path="/products" element={<ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />}></Route>
                     <Route path="/products/:id" element={<DetailPage products={productItems} onAddHandler={onAddHandler} />} />
                     <Route path="/cart" element={<CartPage cartItems={cartItems} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} onClearItemHandler={onClearItemHandler} onClearCartHandler={onClearCartHandler} />} />
                     <Route path="*" element={<NotFoundPage />} />

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
+import CurrencyFormat from "react-currency-format";
 
 
 function DetailPage({ products, onAddHandler }) {
@@ -18,7 +19,7 @@ function DetailPage({ products, onAddHandler }) {
                     
                 <div className="specification">
                     <h1 className="detail-page__name">{product_name}</h1>
-                    <p className="detail-page__price">Product Price : {product_price}</p>
+                    <p className="detail-page__price">Product Price : <CurrencyFormat value={product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /></p>
                     <p className="detail-page__ctg">Category : {product_ctg}</p>
                     
                     <div className="add-to-cart">

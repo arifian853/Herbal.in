@@ -5,6 +5,7 @@ import { ImPriceTags } from 'react-icons/im';
 import { MdHealthAndSafety } from 'react-icons/md';
 import { BsBagCheckFill } from 'react-icons/bs';
 import { Link } from "react-router-dom";
+import CurrencyFormat from "react-currency-format";
 
 
 function HomePage({ onAddHandler }) {
@@ -39,7 +40,7 @@ function HomePage({ onAddHandler }) {
 
             <p className="prod-item__ctg">{productOffer.product_ctg}</p>
             <p className="prod-item__name"><Link to={`/products/${productOffer.id}`}>{productOffer.product_name}</Link></p>
-            <p className="prod-item__price">Price : Rp. {productOffer.product_price}</p>
+            <p className="prod-item__price">Price :  <CurrencyFormat value={productOffer.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /></p>
             <p className="prod-item__desc">{productOffer.product_desc}</p>
 
             <div className="add-to-cart">

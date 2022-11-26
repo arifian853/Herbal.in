@@ -39,7 +39,11 @@ class ArticlesDetailPage extends React.Component {
         }
 
         if(this.state.articles === null){
-            return <p>Loading ...</p>
+            return (
+                <div className="loading">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+            )
         }
     }
 }
