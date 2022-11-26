@@ -15,11 +15,10 @@ function ArticlesBody({ articles }){
         
         </div>
     )
-
 }
 
 ArticlesBody.propTypes = {
-    articles: PropTypes.arrayOf(PropTypes.object).isRequired,
+    articles: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default ArticlesBody;

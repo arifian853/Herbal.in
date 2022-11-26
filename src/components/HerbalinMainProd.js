@@ -6,9 +6,9 @@ import HerbalinFilter from "./HerbalinFilter";
 function HerbalinMainProd({ keyword, keywordChange, selectedFilter, setSelectedFilter }){
     return (
         <div>
-             <h1 className="product-page-text">Product Page</h1>
-             <HerbalinSearch keyword={keyword} keywordChange={keywordChange} />
-             <HerbalinFilter selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
+            <h1 className="product-page-text">Product Page</h1>
+            <HerbalinSearch keyword={keyword} keywordChange={keywordChange} />
+            <HerbalinFilter selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
         </div>
     )
 }

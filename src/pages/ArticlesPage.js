@@ -32,7 +32,6 @@ function ArticlesPage(){
         <div className="article-page">
             <h1><FiBookOpen></FiBookOpen> Here's some Health Articles for you</h1>
             <ArticlesBody articles={articles} />
-            
         
         </div>
     )

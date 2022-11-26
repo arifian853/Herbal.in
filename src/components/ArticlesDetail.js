@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { showFormattedDate } from "../utils/api_articles";
 
 
-function ArticlesDetail({createdAt, article_title, article_image, article_description}) {
+function ArticlesDetail({ createdAt, article_title, article_image, article_description }) {
 
     return (
         <div className="article-detail">
@@ -13,8 +13,6 @@ function ArticlesDetail({createdAt, article_title, article_image, article_descri
                 <h1 className="article-title">{article_title}</h1>
                 <p className="article-createdAt">{showFormattedDate(createdAt)}</p>
                 <p className="article-desc">{article_description}</p>
-                
-
             </div>
         </div>
     )

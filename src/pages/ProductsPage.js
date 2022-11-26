@@ -1,84 +1,80 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import HerbalinMainProd from "../components/HerbalinMainProd";
-import ProductList from "../components/ProductList";
-import { useSearchParams } from "react-router-dom";
-import { getAllProducts } from "../utils/api_products";
-
-function ProductsPage(){
-    const [loading, setLoading] = React.useState(true);
-    const [products, setProducts] = React.useState([]);
-   
-    
-    const [searchParams, setSearchParams ] = useSearchParams();
-    const [keyword, setKeyword] = React.useState(() => {
-        return searchParams.get('keyword') || ''
-    })
-
-    const [ selectedFilter, setSelectedFilter ] = React.useState();
 
 
-    React.useEffect(() => {
-        getAllProducts().then(({ data }) => {
-            setProducts(data);
-            setLoading(false);
-        
-        });
+function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter }){
 
-        return () => {
-            setLoading(true);
-        }
-    }, []);
-
-    
-  
-
-
-
-    // belum selesai
-    async function onAddToCart(){
-
-    }
-
-
-    function onKeywordChangeHandler(keyword) {
-        setKeyword(keyword);
-        setSearchParams({ keyword });
-    }
-
-    function onSelectedFilterHandler(selectedFilter){
-        setSelectedFilter(selectedFilter);
-
-    }
-
-    const searchProducts = products.filter((product) => product.product_name.toLowerCase().includes(keyword.toLowerCase())); 
-    const ctgFilteredProducts = products.filter((product) => product.product_ctg === selectedFilter);
-    const searchFilteredProducts = ctgFilteredProducts.filter((product) => product.product_name.toLowerCase().includes(keyword.toLowerCase())); 
-
-
-    
-    if(loading){
-        return (
-            <div className="loading-element">
-                <p>Loading ...</p>
-            </div>
-        )
-    }
+    const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
+    const ctgFilteredProducts = productItems.filter((productItem) => productItem.product_ctg === selectedFilter);
+    const searchFilteredProducts = ctgFilteredProducts.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
 
 
     return (
 
-
         <div>
-           <HerbalinMainProd keyword={keyword} keywordChange={onKeywordChangeHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler}/>
 
-           {searchFilteredProducts.length > 0 ? <ProductList products={searchFilteredProducts} addToCart={onAddToCart} isProductAdded={products.isProductAdded} /> :
+            <div className="products-page-main">
+                <HerbalinMainProd keyword={keyword} keywordChange={keywordChange} selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter}/>
+            </div>
 
-           <ProductList products={searchProducts} addToCart={onAddToCart} isProductAdded={products.isProductAdded} />
-           
-           }
-            
+            <div className="product-list">
+                {
+                    searchFilteredProducts.length > 0 ? 
+                
+                    searchFilteredProducts.map((productItem) => (
+
+                        <div className="product-item" key={productItem.id}>
+                            <div className="prod-item__image">
+                                <img src={productItem.product_img} alt="herbalin product" />
+                            </div>
+
+                            <p className="prod-item__ctg">{productItem.product_ctg}</p>
+                            <p className="prod-item__name"><Link to={`/products/${productItem.id}`}>{productItem.product_name}</Link></p>
+                            <p className="prod-item__price">Price : Rp. {productItem.product_price}</p>
+                            <p className="prod-item__desc">{productItem.product_desc}</p>
+
+                            <div className="add-to-cart">
+                                <button className="product-item__addToCart" onClick={() => onAddHandler(productItem)}>Add to Cart</button>
+                            </div>
+                        </div>
+                    ))
+
+                    :
+
+                    searchProducts.map((productItem) => (
+                    
+                        <div className="product-item" key={productItem.id}>
+                            <div className="prod-item__image">
+                                <img src={productItem.product_img} alt="herbalin product" />
+                            </div>
+
+                            <p className="prod-item__ctg">{productItem.product_ctg}</p>
+                            <p className="prod-item__name"><Link to={`/products/${productItem.id}`}>{productItem.product_name}</Link></p>
+                            <p className="prod-item__price">Price : Rp. {productItem.product_price}</p>
+                            <p className="prod-item__desc">{productItem.product_desc}</p>
+
+                            <div className="add-to-cart">
+                                <button className="product-item__addToCart" onClick={() => onAddHandler(productItem)}>Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                    ))
+                } 
+                    
+            </div>
         </div>
-    )
+    );
+};
+
+ProductsPage.propTypes = {
+    productItems: PropTypes.arrayOf(PropTypes.object).isRequired, 
+    onAddHandler: PropTypes.func.isRequired, 
+    keyword: PropTypes.string.isRequired, 
+    keywordChange: PropTypes.func.isRequired, 
+    selectedFilter: PropTypes.string, 
+    setSelectedFilter: PropTypes.func,
 }
 
 export default ProductsPage;

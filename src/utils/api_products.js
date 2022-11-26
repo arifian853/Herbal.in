@@ -9,11 +9,4 @@ async function getAllProducts(){
 
 }
 
-async function getProduct(id){
-    const response = await fetch(`${BASE_URL}/products/${id}`);
-    const responseJson = await response.json();
-
-    return { data: responseJson };
-}
-
-export { getAllProducts, getProduct };
+export { getAllProducts };
