@@ -11,10 +11,11 @@ import { useSearchParams } from "react-router-dom";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
 
+
 function App() {
     const [loading, setLoading] = React.useState(true);
     const [ productItems, setProductItems ] = React.useState([]);
-    const [ cartItems, setCartItems ] = React.useState([]);
+    const [ cartItems, setCartItems ] = React.useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [] );
     const [ searchParams, setSearchParams ] = useSearchParams();
     const [ keyword, setKeyword ] = React.useState(() => {
         return searchParams.get('keyword') || ''
@@ -45,12 +46,19 @@ function App() {
     function onAddHandler(productItem){
         const productPresent = cartItems.find((cartItem) => cartItem.id === productItem.id);
 
-       if(!productPresent){
+        if(!productPresent){
              setCartItems([...cartItems, {...productItem, product_qty: 1 }]);
-      
-       } else {
+            
+        } else {
             setCartItems(cartItems.map((cartItem) => cartItem.id === productItem.id ? {...productPresent, product_qty: productPresent.product_qty + 1} : cartItem));
-       }
+
+          
+        }
+
+     
+
+
+        localStorage.setItem('cartItems', JSON.stringify(cartItems))
     }
 
     function onRemoveHandler(productItem){
@@ -70,6 +78,7 @@ function App() {
     function onClearCartHandler(){
         setCartItems([]);
     }
+
 
 
     return (

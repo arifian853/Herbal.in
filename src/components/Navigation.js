@@ -1,16 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 
+
 function Navigation({ logout, name, cartItems }){
+    const [ activeTab, setActiveTab ] = useState("Home");
+    const location = useLocation();
+
+    React.useEffect(() => {
+        if(location.pathname === '/'){
+            setActiveTab('Home');
+        } else if(location.pathname === '/articles'){
+            setActiveTab('Articles');
+        } else if(location.pathname === '/products'){
+            setActiveTab('Products');
+        } else if(location.pathname === '/cart'){
+            setActiveTab('Cart');
+        }
+    }, [location]);
+
     return (
         <nav className="navigation">
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/articles">Articles</Link></li>
-                <li><Link to="/products">Products</Link></li>
-                <li><Link to="/cart">Cart <span class='badge badge-warning' id='lblCartCount'>{cartItems.length}</span> </Link></li>
+                <Link to="/">
+                <li className={`${activeTab === 'Home' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Home")}>Home
+                </li>
+                </Link>
+
+                <Link to="/articles">
+                <li className={`${activeTab === 'Articles' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Articles")}>Articles
+                </li>
+                </Link>
+
+                <Link to="/products">
+                <li className={`${activeTab === 'Products' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Products")}>Products
+                </li>
+                </Link>
+               
+                <Link to="/cart">
+                <li className={`${activeTab === 'Cart' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Cart")}>Cart <span classname='badge  badge-warning' id='lblCartCount'>{cartItems.length}</span>
+                </li>
+                </Link>
+
                 <li id="nav_username"><button onClick={logout}>{name} <FiLogOut /></button></li>
             </ul>
         </nav>
@@ -22,3 +54,6 @@ Navigation.propTypes = {
 }
 
 export default Navigation;
+
+
+

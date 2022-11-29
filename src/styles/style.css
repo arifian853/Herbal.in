@@ -1,3 +1,13 @@
+:root {
+    --green4: #425F57;
+    --green1: #749F82;
+    --green2: #C0EFB8;
+    --green3: #C2CAC1;
+    --white: #EFF5F5;
+    --black: #393E46;
+    --gray: #D9D9D9;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +16,6 @@
 
 body,
 html {
-    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -17,9 +26,19 @@ body {
 }
 
 a:-webkit-any-link {
-    color: #4280DC;
+    color: var(--green1);
     cursor: pointer;
     text-decoration: none;
+}
+
+.not-found {
+    background-color: var(--white);
+    color: var(--black);
+    width: 40em;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+    border-radius: 7px;
 }
 
 
@@ -97,6 +116,56 @@ a:-webkit-any-link {
 }
 
 
+/*Landing Page*/
+
+.main {
+    height: 100vh;
+    background-color: var(--green1);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-landing {
+    padding: 1em;
+    width: 60%;
+}
+
+.greeting {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.greeting img {
+    width: 200px;
+    height: auto;
+}
+
+.right-landing {
+    padding: 1em;
+    text-align: center;
+    width: 40%;
+}
+
+.right-landing button {
+    background-color: var(--green4);
+    color: var(--white);
+    padding: 1em;
+    width: 40%;
+    text-align: center;
+    border: none;
+    border-radius: 7px;
+}
+
+.right-landing button:hover {
+    cursor: pointer;
+}
+
+
 /* Herbalin App */
 
 .herbalin-app .herbalin-app__header {
@@ -135,6 +204,11 @@ a:-webkit-any-link {
     flex-wrap: wrap;
     flex-direction: row;
     padding: 12px 30px;
+    color: white;
+}
+
+li.active-tab {
+    background-color: #54BAB9;
 }
 
 .herbalin-app .herbalin-app__header .navigation ul li a {
@@ -166,80 +240,73 @@ a:-webkit-any-link {
 
 /* Login & Register Page */
 
-.login-page,
-.register-page {
-    width: 100%;
-    background-color: whitesmoke;
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.login-page .logo-background,
-.register-page .logo-background {
-    width: 100%;
+.login-main {
     height: 100vh;
-    background-image: url('../../public/images/leaf.png');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #97cfa9;
-    border-right: 2px solid #749F82;
-    padding: 30px;
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
 }
 
-.login-page .logo-background p,
-.register-page .logo-background p {
-    /* margin: 40px 20px 0; */
-    font-size: 30px;
+.left-side-login {
+    width: 45%;
     text-align: center;
+    color: var(--white);
+    background-color: var(--green1);
+    height: 100vh;
 }
 
-.login-page .login-content .login-text,
-.register-page .register-content .register-text {
-    margin: 20px;
+.left-side-login img {
+    width: 350px;
+    height: auto;
+}
+
+.greeting-login {
+    margin-top: 15vh;
+}
+
+.right-side-login {
+    width: 55%;
     text-align: center;
-    color: #749F82;
+    color: var(--green1);
 }
 
-.login-page .login-content .login-alt,
-.register-page .register-content .register-alt {
-    margin: -15px 30px;
+.form-login {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em;
 }
 
-.login-page .login-content .login-alt .register-here,
-.register-page .register-content .register-alt .login-here {
-    color: #749F82;
-    text-decoration: none;
+.form-login form {
+    text-align: left;
+    color: var(--black);
 }
 
-.login-input,
-.register-input {
-    margin: 30px;
-}
-
-.login-input input,
-.register-input input {
-    display: block;
-    padding: 15px;
-    width: 100%;
-    margin: 10px 0;
-    font-size: 20px;
+.input-column {
+    width: 95%;
+    margin: auto;
+    padding: 1em;
     border: none;
-    background-color: #D9D9D9;
-    border-radius: 8px;
+    border-radius: 7px;
+    background-color: var(--gray);
 }
 
-.login-input button,
-.register-input button {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    font-size: 20px;
-    color: #FFFFFF;
-    background-color: #749F82;
-    border-radius: 8px;
-    margin-top: 40px;
+.btn-login-register {
+    width: 96%;
+    margin: 0 auto;
+    padding: 1em;
     border: none;
+    border-radius: 7px;
+    background-color: var(--green1);
+    color: var(--white);
+}
+
+.btn-login-register:hover {
+    cursor: pointer;
 }
 
 
@@ -286,9 +353,7 @@ a:-webkit-any-link {
     margin: 20px 10px;
     padding: 10px;
     background-color: rgb(182, 212, 137);
-    /* border: 2px solid #07521f; */
     border: 3px solid rgb(174, 212, 118);
-    /* border: none; */
     border-radius: 10px;
 }
 
@@ -312,10 +377,9 @@ a:-webkit-any-link {
     padding: 6px;
     text-align: center;
     color: #eaeaea;
-    /* background-color: #54BAB9; */
 }
 
-.add-to-cart .product-item__addToCart {
+.product-item__addToCart {
     border: 0;
     padding: 5px 12px;
     font-size: 17px;
@@ -323,7 +387,7 @@ a:-webkit-any-link {
     color: #eaeaea;
 }
 
-.add-to-cart .product-item__addToCart:hover {
+.product-item__addToCart:hover {
     color: #97cfa9;
     cursor: pointer;
 }
@@ -331,13 +395,26 @@ a:-webkit-any-link {
 
 /* Cart Page */
 
-.cart-page-text {
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td,
+th {
+    border-bottom: 2px solid #97cfa9;
     text-align: left;
-    margin: 30px 0;
+    padding: 8px;
+}
+
+.cart-page-text {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .cart-page {
-    width: 70%;
+    width: 90%;
     margin: 30px auto;
 }
 
@@ -347,34 +424,15 @@ a:-webkit-any-link {
     color: whitesmoke;
     border: transparent;
     font-weight: 600;
-    margin-bottom: 20px;
 }
 
-.cart-item {
-    display: flex;
-    padding-bottom: 10px;
-    border-bottom: 1px solid grey;
-    margin-bottom: 10px;
+.cart-page .clear-all-button:hover {
+    color: rgb(222, 49, 49);
+    cursor: pointer;
 }
 
-.cart-item__img {
+.cart-item img {
     width: 100px;
-    margin-right: 20px;
-}
-
-.cart-item-spec {
-    width: 250px;
-    margin-right: 50px;
-}
-
-.cart-item-button-group {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.cart-item__qty {
-    text-align: center;
 }
 
 .cart-item button {
@@ -389,31 +447,28 @@ a:-webkit-any-link {
     color: #749F82;
 }
 
-.total-price-per-item-text {
-    display: grid;
-    grid-template-columns: 150px;
-    margin: 20px;
-}
-
-.total-price-per-item {
-    display: grid;
-    grid-template-columns: 100px;
-    margin: 20px 20px;
-}
-
-.remove-item {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 20px 0;
+.cart-item-button-group {
+    display: flex;
+    justify-content: space-around;
 }
 
 .remove-item button {
     width: 35px;
 }
 
-.total-price-all-items {
-    display: flex;
-    justify-content: right;
+.cart-page-bottom {
+    border: none;
+}
+
+.cart-page-buy-now {
+    padding: 7px;
+    border: 2px solid black;
+    background-color: #a3f630;
+}
+
+.cart-page-buy-now:hover {
+    color: #509d69;
+    cursor: pointer;
 }
 
 
@@ -421,24 +476,16 @@ a:-webkit-any-link {
 
 .badge {
     padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-}
-
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
 }
 
 #lblCartCount {
-    font-size: 12px;
+    font-size: 14px;
     background: #CFFF8D;
+    border-radius: 12px;
     color: black;
     padding: 0 5px;
+    margin-left: 3px;
     vertical-align: top;
-    margin-left: -3px;
 }
 
 
@@ -666,21 +713,14 @@ a:-webkit-any-link {
     flex: none;
 }
 
-
-/* 
-.detail-page .detail-page__specification {
-    margin: 10px;
-} */
-
 .detail-page .specification {
     padding: 20px;
 }
 
-
-/* .detail-page .detail-page__desc p {
-    padding: 10px;
-    text-align: justify;
-} */
+.detail-page__add-to-cart {
+    padding: 6px;
+    color: #eaeaea;
+}
 
 
 /* Filter Product */

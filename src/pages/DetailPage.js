@@ -22,7 +22,7 @@ function DetailPage({ products, onAddHandler }) {
                     <p className="detail-page__price">Product Price : <CurrencyFormat value={product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /></p>
                     <p className="detail-page__ctg">Category : {product_ctg}</p>
                     
-                    <div className="add-to-cart">
+                    <div className="detail-page__add-to-cart">
                         <button className="product-item__addToCart" onClick={() => onAddHandler(product)}>
                             <MdOutlineAddShoppingCart /> Add to Cart
                         </button>
