@@ -39,7 +39,7 @@ function Navigation({ logout, name, cartItems }){
                 </Link>
                
                 <Link to="/cart">
-                <li className={`${activeTab === 'Cart' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Cart")}>Cart <span classname='badge  badge-warning' id='lblCartCount'>{cartItems.length}</span>
+                <li className={`${activeTab === 'Cart' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Cart")}>Cart <span className='badge  badge-warning' id='lblCartCount'>{cartItems.length}</span>
                 </li>
                 </Link>
 

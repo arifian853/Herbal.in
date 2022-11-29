@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function HerbalinSearch({ keyword, keywordChange }){
     return (
         <div className="search-bar">
-            <input type="search" placeholder=" Search by product name ..." value={keyword} onChange={(event) => keywordChange(event.target.value)} />
+            <input type="search" placeholder=" Cari berdasarkan nama produk ..." value={keyword} onChange={(event) => keywordChange(event.target.value)} />
         </div>
     )
 }

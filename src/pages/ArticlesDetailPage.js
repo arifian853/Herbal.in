@@ -41,7 +41,7 @@ class ArticlesDetailPage extends React.Component {
         if(this.state.articles === null){
             return (
                 <div className="loading">
-                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    <div classname="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </div>
             )
         }

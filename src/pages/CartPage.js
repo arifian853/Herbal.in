@@ -9,9 +9,15 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
     return (
         <div className="cart-page">
             <h1 className="cart-page-text">Cart Page</h1>
-
+            <hr />
             {
-                cartItems.length === 0 ? <div>No items here</div> : 
+                cartItems.length === 0 ? 
+                
+                <div className="cart-page-no-item">
+                    <p className="cart-page-no-item-info">Tidak ada item di dalam keranjang</p>
+                    <p>Silahkan tambahkan produk terlebih dahulu :)</p>
+                    <p>Selamat berbelanja !</p>
+                </div> : 
             
             <>
                 

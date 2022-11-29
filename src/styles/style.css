@@ -410,12 +410,30 @@ th {
 
 .cart-page-text {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .cart-page {
     width: 90%;
     margin: 30px auto;
+}
+
+.cart-page hr {
+    width: 70px;
+    background: #a3f630;
+    border: 2px solid #a3f630;
+    border-radius: 10px;
+    margin: 0 auto 30px;
+}
+
+.cart-page-no-item {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cart-page-no-item-info {
+    color: red;
 }
 
 .cart-page .clear-all-button {
