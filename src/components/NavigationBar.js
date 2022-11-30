@@ -8,7 +8,7 @@ const Navigation = ({ logout, cartItems }) => {
     return (
         <nav className="navigation">
             <ul>
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/home">Home</Link></li>
                 <li><Link to="/articles">Articles</Link></li>
                 <li><Link to="/products">Products</Link></li>
                 <li><Link to="/cart">Cart <span class='badge badge-warning' id='lblCartCount'>{cartItems.length}</span> </Link></li>

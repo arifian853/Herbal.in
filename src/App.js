@@ -97,11 +97,52 @@ function App() {
                             <HomePage onAddHandler={onAddHandler} />
                         </SecureRoute>
                         } />
-                        <Route path="/articles" element={<ArticlesPage />} />
-                        <Route path="/articles/:id" element={<ArticlesDetailPageWrapper />} />
-                        <Route path="/products" element={<ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />}></Route>
-                        <Route path="/products/:id" element={<DetailPage products={productItems} onAddHandler={onAddHandler} />} />
-                        <Route path="/cart" element={<CartPage cartItems={cartItems} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} onClearItemHandler={onClearItemHandler} onClearCartHandler={onClearCartHandler} />} />
+                        <Route path="/articles" element={ 
+                        <SecureRoute>
+                            <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in</p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <ArticlesPage />
+                            </SecureRoute>} />
+                        <Route path="/articles/:id" element={
+                        <SecureRoute>
+                            <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in</p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <ArticlesDetailPageWrapper />
+                        </SecureRoute>} />
+                        <Route path="/products" element={
+                        <SecureRoute>
+                             <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in</p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />
+                        </SecureRoute>}></Route>
+                        <Route path="/products/:id" element={
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                    <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                    <p className="herbalin-app__header_title">Herbal.in</p>
+                                    <Navigation cartItems={cartItems} />
+                                </header>
+                                <DetailPage products={productItems} onAddHandler={onAddHandler} />
+                            </SecureRoute>} />
+                        <Route path="/cart" element={
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                    <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                    <p className="herbalin-app__header_title">Herbal.in</p>
+                                    <Navigation cartItems={cartItems} />
+                                </header>
+                                <CartPage cartItems={cartItems} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} onClearItemHandler={onClearItemHandler} onClearCartHandler={onClearCartHandler} />
+                            </SecureRoute>
+                        } />
                         <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                 </UserAuthContextProvider>
