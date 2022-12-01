@@ -3,11 +3,17 @@ import PropTypes from "prop-types";
 import ArticlesDetail from "../components/ArticlesDetail";
 import { getArticle } from "../utils/api_articles";
 import { useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 function ArticlesDetailPageWrapper(){
     const { id } = useParams();
 
-    return <ArticlesDetailPage id={id} />;
+    return <div>
+                <Helmet>
+                    <title>Herbal.in - Artikel { id }</title>
+                </Helmet>
+                <ArticlesDetailPage id={id} />
+            </div>;
 }
 
 class ArticlesDetailPage extends React.Component {

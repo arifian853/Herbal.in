@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
+import { Helmet } from 'react-helmet';
 
-
-function DetailPage({ products, onAddHandler }) {
+const DetailPage = ({ products, onAddHandler }) => {
 
     let { id } = useParams();
     const product = products[(id-1)];
@@ -15,6 +15,9 @@ function DetailPage({ products, onAddHandler }) {
     return (
         <>
             <div className="detail-page">
+                <Helmet>
+                    <title>Herbal.in - {id}, {product_name}</title>
+                </Helmet>
                 <img className="detail-page__image" src={product_img} alt={product_name} />
                     
                 <div className="specification">

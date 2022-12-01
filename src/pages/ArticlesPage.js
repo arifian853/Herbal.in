@@ -2,7 +2,7 @@ import React from "react";
 import ArticlesBody from "../components/ArticlesBody";
 import { getArticles } from "../utils/api_articles"; 
 import { FiBookOpen } from "react-icons/fi" ;
-
+import { Helmet } from 'react-helmet';
 
 function ArticlesPage(){
     const [loading, setLoading] = React.useState(true);
@@ -30,7 +30,12 @@ function ArticlesPage(){
 
     return (
         <div className="article-page">
-            <h1><FiBookOpen></FiBookOpen> Here's some Health Articles for you</h1>
+            <Helmet>
+                <title>Herbal.in - Artikel
+                    
+                </title>
+            </Helmet>
+            <h1><FiBookOpen></FiBookOpen> Artikel kesehatan untuk anda</h1>
             <ArticlesBody articles={articles} />
         
         </div>

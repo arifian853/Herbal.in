@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import HerbalinMainProd from "../components/HerbalinMainProd";
 import CurrencyFormat from "react-currency-format";
+import { Helmet } from 'react-helmet';
 
-function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading }){
+const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading }) => {
 
     const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
     const ctgFilteredProducts = productItems.filter((productItem) => productItem.product_ctg === selectedFilter);
@@ -22,7 +23,9 @@ function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, sele
     return (
 
         <div>
-
+            <Helmet>
+                <title>Herbal.in - Produk</title>
+            </Helmet>
             <div className="products-page-main">
                 <HerbalinMainProd keyword={keyword} keywordChange={keywordChange} selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter}/>
             </div>

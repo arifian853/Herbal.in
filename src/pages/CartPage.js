@@ -2,15 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
+import { Helmet } from 'react-helmet';
 
 function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler, onClearCartHandler }) {
 
     return (
         <div className="cart-page">
-            <h1 className="cart-page-text">Cart Page</h1>
+            <Helmet>
+                <title>Herbal.in - Keranjang</title>
+            </Helmet>
+            <h1 className="cart-page-text">Keranjang anda</h1>
 
             {
-                cartItems.length === 0 ? <div>No items here</div> : 
+                cartItems.length === 0 ? <div>Anda tidak memiliki pesanan</div> : 
             
             <>
                 <button className="clear-all-button" onClick={() => onClearCartHandler()}>Clear All</button>
