@@ -5,7 +5,7 @@ import { getArticle } from "../utils/api_articles";
 import { useParams } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
-function ArticlesDetailPageWrapper(){
+const ArticlesDetailPageWrapper = () => {
     const { id } = useParams();
 
     return <div>

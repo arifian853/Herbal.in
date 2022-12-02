@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ArticleItem from "./ArticleItem";
 
-function ArticlesBody({ articles }){
+const ArticlesBody = ({ articles }) => {
     return (
         <div className="article-body">
             <p>Read some articles below to expand your knowledge</p>

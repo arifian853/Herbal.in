@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { showFormattedDate } from "../utils/api_articles";
 
-function ArticleItem({ id, createdAt, article_title, article_image, article_description }){
+const ArticleItem = ({ id, createdAt, article_title, article_image, article_description }) => {
     return (
         <div className="article-item__content">
             <img src={article_image} alt={article_title} className="article-item__image" />

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
 import ArticlesBody from "../components/ArticlesBody";
 import { getArticles } from "../utils/api_articles"; 
 import { FiBookOpen } from "react-icons/fi" ;
 import { Helmet } from 'react-helmet';
 
-function ArticlesPage(){
-    const [loading, setLoading] = React.useState(true);
-    const [articles, setArticles] = React.useState([]);
+const ArticlesPage = () =>{
+    const [loading, setLoading] = useState(true);
+    const [articles, setArticles] = useState([]);
     
-    React.useEffect(() => {
+    useEffect(() => {
         getArticles().then(({ data }) => {
             setArticles(data);
             setLoading(false);

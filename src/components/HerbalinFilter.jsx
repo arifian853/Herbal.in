@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function HerbalinFilter({ selectedFilter, setSelectedFilter }){
+const HerbalinFilter = ({ selectedFilter, setSelectedFilter }) => {
     return (
         <div className="filter-item">
             <label>
-                Filter by category :
+                Filter kategori:
             </label> 
 
             <select value={selectedFilter} onChange={(e) => setSelectedFilter(e.target.value)}>
