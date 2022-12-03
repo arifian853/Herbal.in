@@ -1,0 +1,281 @@
+[{
+        "product_name": "Wedang.in Jahe",
+        "product_price": 15000,
+        "product_desc": "Minuman tradisional yang sangat ampuh untuk mengatasi pegal-pegal dan sariawan.",
+        "product_img": "https://st.depositphotos.com/1098692/3382/i/600/depositphotos_33821885-stock-photo-ginger-tea.jpg",
+        "product_ctg": "Jamu",
+        "id": 1
+    },
+    {
+        "product_name": "Green.in Tea",
+        "product_price": 30500,
+        "product_desc": "Minuman teh hijau dikenal memiliki kandungan antioksidan yang tinggi atau disebut juga sebagai polifenol. Kandungan polifenol mampu untuk menyegarkan tubuh serta menumbuhkan rambut. Selain itu polifenol juga ampuh untuk menghambat pertumbuhan sel kanker.",
+        "product_img": "https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "product_ctg": "Fitofarmaka",
+        "id": 2
+    },
+    {
+        "product_name": "Wedang.in Secang",
+        "product_price": 20000,
+        "product_desc": "Minuman yang cocok diminum dingin ataupun panas. Dengan secara rutin mengonsumsi wedang secang bisa meningkatkan stamina sekaligus menghangatkan tubuh. Ramuan ini sangat cocok untuk dikonsumsi saat Anda sedang flu atau demam karena sifatnya sangat menyegarkan.",
+        "product_img": "https://st4.depositphotos.com/20616804/22581/i/600/depositphotos_225812872-stock-photo-wedang-uwuh-traditional-herb-drink.jpg",
+        "product_ctg": "Jamu",
+        "id": 3
+    },
+    {
+        "product_name": "Serbat.in Asam Jawa",
+        "product_price": 10500,
+        "product_desc": "Asam merupakan bahan herbal yang sering dipakai sebagai bumbu masak. Rasanya yang unik membuat asam jawa sangat menyegarkan untuk dikonsumsi. Minuman herbal serbat asam jawa sangat ampuh untuk meredakan batuk yang sudah berkepanjangan. Selain itu juga minuman ini sangat cocok untuk membantu meredakan flu.",
+        "product_img": "https://cdn.pixabay.com/photo/2015/02/15/09/06/tamarind-636962_1280.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 4
+    },
+    {
+        "product_name": "Wedang.in Kencur",
+        "product_price": 10500,
+        "product_desc": "Kencur merupakan bahan herbal yang sering dipakai sebagai bumbu masak. Rasanya yang unik membuat kencur sangat menyegarkan untuk dikonsumsi. Minuman herbal kencur ini  sangat ampuh untuk mengatasi panas dalam dan menaikkan imunitas tubuh.",
+        "product_img": "https://images.pexels.com/photos/4871342/pexels-photo-4871342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "product_ctg": "Jamu",
+        "id": 5
+    },
+    {
+        "product_name": "Bawang.in Dayak",
+        "product_price": 10500,
+        "product_desc": "Bagi sebagian orang bawang merah hanya bermanfaat untuk masakan. Tapi tahukah bawang merah dayak ini memiliki khasiat yang luar biasa bagi kesehatan, salah satunya sebagai obat herbal alami untuk diabetes. Dimana penyandang diabetes bisa minum air rebusan daun bawang merah dayak untuk mengontrol penyakitnya. Diketahui bawang merah dayak sendiri memang memiliki memiliki bentuk yang mirip dengan bawang merah pada biasanya. Namun, kedua bawang tetap memiliki perbedaan. Dimana bawang merah dayak memiliki rasa yang lebih pedas dan agak pahit.",
+        "product_img": "https://st2.depositphotos.com/1692343/9186/i/600/depositphotos_91861404-stock-photo-organic-red-pearl-onions.jpg",
+        "product_ctg": "Jamu",
+        "id": 6
+    },
+    {
+        "product_name": "Kunyit.in Asam",
+        "product_price": 5000,
+        "product_desc": "Minuman herbal kunyit asam sangat mudah dijumpai di mana saja. Memiliki fungsi untuk mencerahkan kulit dan memperlancar diet membuatnya menjadi sangat diminati.",
+        "product_img": "https://st2.depositphotos.com/4380321/8621/i/600/depositphotos_86211896-stock-photo-turmeric-roots-with-lemon-and.jpg",
+        "product_ctg": "Jamu",
+        "id": 7
+    },
+    {
+        "product_name": "Wedang.in Temulawak",
+        "product_price": 15000,
+        "product_desc": "Tanaman temulawak sangat ampuh untuk mengatasi anak yang tidak nafsu makan. Ramuan temulawak juga terbukti efektif mengatasi gangguan pencernaan dan mengurangi kolesterol pada tubuh.",
+        "product_img": "https://images.pexels.com/photos/1337585/pexels-photo-1337585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "product_ctg": "Jamu",
+        "id": 8
+    },
+    {
+        "product_name": "Wedang.in Sereh",
+        "product_price": 12000,
+        "product_desc": "Selain untuk membuat masakan menjadi lebih nikmat, sereh juga bisa digunakan untuk menjadi ramuan herbal. Kandungan citronella yang terdapat di dalamnya ampuh untuk mengatasi masuk angin, demam dan pilek.",
+        "product_img": "https://cdn.pixabay.com/photo/2022/01/17/02/14/lemongrass-6943711_1280.jpg",
+        "product_ctg": "Jamu",
+        "id": 9
+    },
+    {
+        "product_name": "Wedang.in Tahu",
+        "product_price": 12000,
+        "product_desc": "Minuman herbal ini memiliki khasiat yang mampu untuk menambah nafsu makan dan menghilangkan batuk berdahak.",
+        "product_img": "https://st.depositphotos.com/63202130/58820/i/600/depositphotos_588208380-stock-photo-wedang-tahu-kembang-tahu-ginger.jpg",
+        "product_ctg": "Jamu",
+        "id": 10
+    },
+    {
+        "product_name": "Beras.in Kencur",
+        "product_price": 8000,
+        "product_desc": "Jamu Beras.in Kencur merupakan minuman herbal yang menyegarkan. Khasiatnya adalah membantu tubuh melawan radikal bebas yang menjadi pemicu beberapa penyakit, menurunkan tekanan darah tinggi, hingga mengurangi risiko terserang penyakit jantung dan pembuluh darah (kardiovaskular).",
+        "product_img": "https://st.depositphotos.com/62710562/55034/i/600/depositphotos_550345426-stock-photo-jamu-beras-kencur-indonesian-herbal.jpg",
+        "product_ctg": "Jamu",
+        "id": 11
+    },
+    {
+        "product_name": "Bandrek.in",
+        "product_price": 10000,
+        "product_desc": "Minuman herbal ini berasal dari Jawa Barat. Khasiat utama dari bandrek adalah untuk melawan pertumbuhan sel kanker dan memiliki anti inflamasi. Bandrek juga bisa meringankan gejala batuk dan pilek.",
+        "product_img": "https://st4.depositphotos.com/32276582/40790/i/600/depositphotos_407906644-stock-photo-bandrek-ginger-tea-indonesian-made.jpg",
+        "product_ctg": "Jamu",
+        "id": 12
+    },
+    {
+        "product_name": "Bir.in Pletok",
+        "product_price": 8000,
+        "product_desc": "Minuman bir pletok sangatlah digemari. Selain rasanya yang unik, bir pletok juga memiliki banyak kandungan bermanfaat di dalamnya. Bir pletok sangat ampuh untuk mengatasi panas dalam dan diare.",
+        "product_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfG07BUg7BJn6l7OqcGCpQE0I6Cyp1Z2e1cQ&usqp=CAU",
+        "product_ctg": "O.H. Terstandar",
+        "id": 13
+    },
+    {
+        "product_name": "Wedang.in Uwuh Gula Aren",
+        "product_price": 18000,
+        "product_desc": "Wedang uwuh berisi jahe, kayu secang, dan aneka daun kering. Selain bahan-bahan tersebut wedang uwuh biasanya juga ditambahkan pemanis.",
+        "product_img": "https://st2.depositphotos.com/42201092/42978/i/600/depositphotos_429784216-stock-photo-brown-sugar-gula-merah-isolated.jpg",
+        "product_ctg": "Jamu",
+        "id": 14
+    },
+    {
+        "product_name": "Wedang.in Ronde Merah Hijau",
+        "product_price": 12000,
+        "product_desc": "Wedang Ronde Merah Hijau memiliki khasiat penambah stamina, pereda rasa sakit, dan menghambat jamur.",
+        "product_img": "https://st.depositphotos.com/62710562/53785/i/600/depositphotos_537851948-stock-photo-wedang-ronde-chewy-cake-filled.jpg",
+        "product_ctg": "Jamu",
+        "id": 15
+    },
+    {
+        "product_name": "Madu.in",
+        "product_price": 40000,
+        "product_desc": "Madu merupakan obat tradisional untuk meredakan sakit tenggorokan. Sebuah studi menemukan, madu juga dapat meredakan batuk lebih efektif daripada obat OTC yang mengandung dekstrometorfan.",
+        "product_img": "https://st2.depositphotos.com/1004070/7405/i/600/depositphotos_74055411-stock-photo-jar-of-honey-with-honey.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 16
+    },
+    {
+        "product_name": "Jintan.in Hitam",
+        "product_price": 20000,
+        "product_desc": "Jintan hitam atau habbatussauda ternyata berbeda dengan jintan putih atau jintan kebanyakan. Jintan kebanyakan berasal dari tanaman Cuminum cyminum, maka jintan hitam berasal dari tanaman Nigella sativa. Dalam penyebutan bahasa Inggris, habbatussauda lebih sering disebut black seeds atau black caraway dibanding cumin yang merujuk pada jintan umumnya. Kandungan nutrisi pada jintan hitam bisa digunakan untuk mengobati beragam penyakit. Mulai dari penyakit ringan seperti sakit perut hingga penyakit kronis seperti darah tinggi, kolesterol, dan diabetes. ",
+        "product_img": "https://st4.depositphotos.com/1000141/22560/i/600/depositphotos_225607268-stock-photo-black-cumin-seeds-white-background.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 17
+    },
+    {
+        "product_name": "Jintan.in Putih",
+        "product_price": 20000,
+        "product_desc": "Jintan putih bukan sekadar rempah yang digunakan sebagai penyedap masakan. Lebih dari itu, jenis rempah ini memiliki berbagai manfaat bagi kesehatan, mulai dari menurunkan berat badan hingga mengatasi gangguan pencernaan.",
+        "product_img": "https://st4.depositphotos.com/9419278/39027/i/600/depositphotos_390274704-stock-photo-cumin-tea-also-known-jeera.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 18
+    },
+    {
+        "product_name": "Honey.in Lemon Tea Ginger",
+        "product_price": 35000,
+        "product_desc": "lemon tea yang dimaksud di sini bukanlah lemon tea kemasan yang mengandung terlalu banyak gula. Sebab kerugian yang akan timbul akibat kadar gula berlebih itu akan menutupi manfaat yang bisa didapatkan dari segelas lemon tea. Sehingga, jika ingin mendapatkan manfaat minuman ini, pastikan Anda mengonsumsi yang tidak mengandung terlalu banyak gula. Adapun manfaatnya yaitu bisa menjadi minuman diet yang nikmat, kaya antioksidan, baik untuk kulit dan bantu tingkatkan daya tahan tubuh",
+        "product_img": "https://st2.depositphotos.com/1194063/5421/i/600/depositphotos_54219267-stock-photo-cup-of-ginger-tea-with.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 19
+    },
+    {
+        "product_name": "Minum.in Kelapa",
+        "product_price": 18000,
+        "product_desc": "Sejak dulu air kelapa sudah dikenal dan digunakan sebagai penurun panas alami yang cukup efektif. Minum air kelapa dapat membantu badan agar terus terhidrasi dan segar. Selain itu, kelapa juga mengandung vitamin, mineral serta elektrolit yang dapat membantu mengembalikan kadar air yang hilang dari tubuh.",
+        "product_img": "https://st2.depositphotos.com/1531666/8216/i/600/depositphotos_82160098-stock-photo-fresh-coconut-drink-with-young.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 20
+    },
+    {
+        "product_name": "Peppermint.in Oil",
+        "product_price": 25000,
+        "product_desc": "Tidak hanya digunakan sebagai penyegar mulut dan pencegah bau napas tidak segar, daun peppermint juga digunakan sebagai suplemen herbal dan minyak esensial karena memiliki segudang manfaat dibidang kesehatan tubuh. Sebagai tanaman aromatik yang berasal dari campuran water mint dan spearmint tanaman ini memiliki beberapa manfaat khusus di bidang kesehatan seperti Dapat mengobati masalah perut kembung, nyeri haid, diare, mual, gangguan cemas, nyeri otot, gangguan saraf, pilek, gangguan pencernaan, dan peradangan pada saluran usus besar.",
+        "product_img": "https://cdn.pixabay.com/photo/2018/01/08/19/56/leaf-3070153_1280.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 21
+    },
+    {
+        "product_name": "Teh.in Mint",
+        "product_price": 35000,
+        "product_desc": "Minum satu cangkir teh mint atau peppermint dapat membantu masalah pencernaan seperti kembung, sindrom iritasi jaringan bowel (IBS) dan batu empedu. Karena efek daun mint yang menenangkan, banyak pula yang menyeduh daun mint segar atau teh daun mint untuk meredakan flu, sakit kepala dan batuk. Teh mint hangat efektif melegakan tenggorokan dan membuka saluran pernafasan lebih baik saat hidung tersumbat. ",
+        "product_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO7WAvzlmxApS3F_1RvHE8b2S0KlhhRVWv8g&usqp=CAU",
+        "product_ctg": "Fitofarmaka",
+        "id": 22
+    },
+    {
+        "product_name": "Black.in Garlic",
+        "product_price": 15000,
+        "product_desc": "Black Garlic ini merupakan salah satu cara untuk menghilangkan bau yang terdapat pada bawang putih. Disamping itu, berdasarkan hasil penelitian diketahui bawang bawang hitam memiliki aktivitas aktioksidan 10 kali lebih tinggi bandingkan dengan bawang putih yang belum diolah. Sehingga banyak manfaat yang diberikan dari bawang hitam ini yang tinggi akan antioksidan seperti untuk mencegah penuaan dini, mencegah kanker, dan juga dapat meningkatkan imunitas tubuh",
+        "product_img": "https://st2.depositphotos.com/1354142/6367/i/600/depositphotos_63670151-stock-photo-black-garlic-bulbs-and-cloves.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 23
+    },
+    {
+        "product_name": "Manis.in Bawang Putih Madu",
+        "product_price": 35000,
+        "product_desc": "Madu dikenal memilik segudang manfaat yang baik bagi kesehatan bahkan kecantikan. Mulai dari menguatkan tubuh dan mencegah dari berbagai macam penyakit, perpaduan madu dan bawang putih bisa jadi kombinasi yang membantu badan lebih fit.",
+        "product_img": "https://st3.depositphotos.com/16122460/31657/i/600/depositphotos_316575390-stock-photo-composition-with-cold-remedies-on.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 24
+    },
+    {
+        "product_name": "Manis.in Bawang Putih Tunggal",
+        "product_price": 35000,
+        "product_desc": "Bawang putih tunggal ini juga dikenal dengan bawang lanang dalam bahasa Jawa. Sementara dalam istilah bahasa Inggris, populer dengan sebutan solo garlic atau single clover. Dinamakan demikian karena bentuknya yang bulat utuh, nyaris menyerupai bentuk bengkoang dalam ukuran kecil.",
+        "product_img": "https://st2.depositphotos.com/1177973/6256/i/600/depositphotos_62563945-stock-photo-canned-garlic-in-glass-jar.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 25
+    },
+    {
+        "product_name": "Acar.in Bawang Putih",
+        "product_price": 10000,
+        "product_desc": "Tidak semua orang bisa dan suka mengonsumsi bawang putih mentah. Selain karena rasanya yang cukup pedas, aromanya yang tajam pun cukup menyengat. Selain dimasak, kamu juga bisa membuat bawang putih menjadi acar agar lebih mudah dan enak dimakan. Acar bawang putih bisa dijadikan kudapan atau makanan pendamping yang memberi rasa segar.",
+        "product_img": "https://st.depositphotos.com/1046885/2293/i/600/depositphotos_22936048-stock-photo-pickled-garlic-in-glass-jar.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 26
+    },
+    {
+        "product_name": "Madu.in Bawang Lanang",
+        "product_price": 12000,
+        "product_desc": "Mudah sakit dan sering merasa pusing atau letih? Itu bisa saja terjadi karena imunitas tubuh kamu menurun. Hal ini bisa disebabkan oleh banyak hal mulai dari stres sampai kurangnya nutrisi yang dibutuhkan tubuh. Untuk mengatasinya, kamu membutuhkan makanan yang bergizi dan juga istirahat yang cukup. Selain hidangan yang bernutrisi, kamu juga bisa mulai beralih ke kudapan sehat seperti Madu Bawang Lanang ini. Tidak cuma punya rasa enak yang unik, Madu Bawang Lanang ini memiliki beberapa khasiat. Mulai dari meningkatkan stamina, membersihkan timbunan lemak, membantu membasmi bakteri dan virus, membantu menghambat pertumbuhan sel kanker sampai meremajakan syaraf dan meningkatkan imunitas tubuh. Terbuat dari madu hutan asli yang kaya manfaat dipadukan bersama bawang lanang alias bawang putih tunggal, produk Madu Bawang Lanang bisa dijadikan suplemen berbahan herbal untuk membantu badan dari penyakit.",
+        "product_img": "https://st3.depositphotos.com/1177973/17960/i/600/depositphotos_179606096-stock-photo-composition-honey-garlic-natural-cold.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 27
+    },
+    {
+        "product_name": "Lotus.in Herbal",
+        "product_price": 75000,
+        "product_desc": "Selain kecantikannya, ternyata tanaman Teratai juga memiliki berbagai keunggulan, lho. Tahukah kamu bahwa tanaman Teratai dapat dijadikan sebagai obat? Teratai ternyata banyak menjadi obat herbal khususnya di Tiongkok untuk berbagai penyakit. Nyatanya biji Teratai putih ternyata mampu kamu jadikan sebagai obat untuk meredakan diare, lho. Selain itu, kandungan pada Teratai mampu mengurangi gula darah juga kolesterol. Kandungan serat serta karbohidrat yang kompleks pada akar Teratai mampu menjadi obat untuk menurunkan gula darah dan kolestrol.",
+        "product_img": "https://st2.depositphotos.com/2543399/9784/i/600/depositphotos_97844518-stock-photo-flowering-tea-in-glass-teapot.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 28
+    },
+    {
+        "product_name": "Garlic.in Juice",
+        "product_price": 30000,
+        "product_desc": "Lemon mengandung vitamin A, B1, B2, C, bioflavonoids, pektin, dan fosfor yang bermanfaat menurunkan kolesterol tinggi.  Sedangkan bawang putih mengandung alisin yang bisa meluruhkan kolesterol dan lemak dalam tubuh. Menggabungkan lemon dan bawang putih bisa membantu menurunkan kolesterol tinggi secara signifikan bila dikonsumsi secara rutin.",
+        "product_img": "https://st2.depositphotos.com/10614052/45551/i/600/depositphotos_455513058-stock-photo-cup-healthy-garlic-tea-white.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 29
+    },
+    {
+        "product_name": "Ekstrak.in Jahe",
+        "product_price": 20000,
+        "product_desc": "Jahe adalah salah satu jenis rempah-rempah yang punya segudang manfaat. Khasiatnya bisa lebih baik lagi saat tanaman rimpang ini dicampur dengan bawang putih untuk bahan makanan maupun minuman hangat. Manfaat jahe dan bawang putih yang terkandung di dalamnya bisa didapat sekaligus. Dua bahan ini memiliki sifat yang menghangatkan dan bisa membuat tubuh lebih bugar. Adapun manfaat Jahe dan bawang putih yaitu mengurangi peradangan, mencegah kerusakan sel tubuh dan menjaga kesehatan otak",
+        "product_img": "https://images.pexels.com/photos/1337585/pexels-photo-1337585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "product_ctg": "Fitofarmaka",
+        "id": 30
+    },
+    {
+        "product_name": "Kelor.in",
+        "product_price": 50000,
+        "product_desc": "Memanfaatkan daur kelor sebagai obat kolesterol memiliki banyak manfaatnya yaitu menurunkan tekanan darah tinggi, mengurangi kolesterol dan baik untuk kesehatan jantung, menurunkan kadar gula darah/diabetes",
+        "product_img": "https://st.depositphotos.com/1009329/4395/i/600/depositphotos_43958223-stock-photo-green-and-dired-moringa-leaves.jpg",
+        "product_ctg": "O.H. Terstandar",
+        "id": 31
+    },
+    {
+        "product_name": "Probiotik.in",
+        "product_price": 45000,
+        "product_desc": "Probiotik adalah salah satu kunci yang dapat mengobati sariawan. Probiotik menciptakan lingkungan yang lebih ramah di tubuh sehingga bakteri tidak terlalu banyak dan menjaganya dari masalah. Jika kamu mulai mengalami rasa sakit, yoghurt yang telah ditambahkan dengan probiotik merupakan pilihan terbaik karena kesejukannya juga akan membantu mengurangi rasa geli atau sensasi terbakar yang ada",
+        "product_img": "https://st3.depositphotos.com/25827130/34181/i/600/depositphotos_341811408-stock-photo-pouring-homemade-kefir-yogurt-with.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 32
+    },
+    {
+        "product_name": "Baking.in Soda",
+        "product_price": 20000,
+        "product_desc": "Kumur menggunakan larutan baking soda dapat membantu mengurangi peradangan sehingga lebih mudah mengunyah makanan. Caranya cukup mudah yaitu dengan mencampurmencampur 1 sendok teh baking soda, 2 sendok makan jus lidah buaya, dan 1/2 cangkir air hangat kemudian kumur selama 10 detik.",
+        "product_img": "https://st.depositphotos.com/1800166/4200/i/600/depositphotos_42006235-stock-photo-close-up-of-baking-soda.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 33
+    },
+    {
+        "product_name": "Cuka.in Apel",
+        "product_price": 30000,
+        "product_desc": "Cuka sari apel adalah pasangan bagi probiotik. Jika probiotik memberi kita semua bakteri baik, cuka sari apel bisa membunuh semua bakteri jahat dan meningkatkan pertumbuhan bakteri baik tersebut. Cukup mencampur air hangat dan cuka sari apel yang sama dan berkumur setiap hari sampai sariawannya hilang.",
+        "product_img": "https://cdn.idntimes.com/content-images/community/2018/02/apple-cider-vinegar-drink-374f643259091c52f600db02095b4c53.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 34
+    },
+    {
+        "product_name": "Licorice.in",
+        "product_price": 20000,
+        "product_desc": "Licorice telah lama digunakan sebagai obat tradisional untuk meredakan batuk dan mengatasi gejala asam lambung. Tak hanya itu, tanaman herbal ini ternyata juga memiliki beragam manfaat lain bagi kesehatan tubuh. Licorice adalah salah satu jenis tanaman herbal yang banyak tumbuh di wilayah Asia, termasuk Indonesia. Bagian akarnya sudah lama digunakan untuk mengatasi berbagai gangguan kesehatan, seperti eksim, sembelit, dan tukak lambung.",
+        "product_img": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1632135190/attached_image/ungkap-khasiat-licorice-si-manis-yang-diklaim-banyak-manfaatnya-0-alodokter.jpg",
+        "product_ctg": "Fitofarmaka",
+        "id": 35
+    }
+]
