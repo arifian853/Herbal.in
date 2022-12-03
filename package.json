@@ -1,7 +1,7 @@
 {
-  "name": "login-auth-backend",
+  "name": "herbal-in-backend",
   "version": "1.0.0",
-  "description": "backend for login-auth app",
+  "description": "backend for herbal-in web project",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
