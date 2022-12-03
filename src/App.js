@@ -10,6 +10,11 @@ import ProductsPage from "./pages/ProductsPage";
 import { useSearchParams } from "react-router-dom";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import AddArticle from "./pages/AddArticle";
+
+
+
 
 
 function App() {
@@ -51,13 +56,7 @@ function App() {
             
         } else {
             setCartItems(cartItems.map((cartItem) => cartItem.id === productItem.id ? {...productPresent, product_qty: productPresent.product_qty + 1} : cartItem));
-
-          
         }
-
-     
-
-
         localStorage.setItem('cartItems', JSON.stringify(cartItems))
     }
 
@@ -82,6 +81,8 @@ function App() {
 
 
     return (
+       
+
         <div className="herbalin-app">
             <header className="herbalin-app__header">
                 <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
@@ -95,13 +96,26 @@ function App() {
                     <Route path="/" element={<HomePage onAddHandler={onAddHandler} />} />
                     <Route path="/articles" element={<ArticlesPage />} />
                     <Route path="/articles/:id" element={<ArticlesDetailPageWrapper />} />
+                    <Route path="/add-article" element={<AddArticle />} />
+                 
+
                     <Route path="/products" element={<ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />}></Route>
                     <Route path="/products/:id" element={<DetailPage products={productItems} onAddHandler={onAddHandler} />} />
+                   
+
                     <Route path="/cart" element={<CartPage cartItems={cartItems} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} onClearItemHandler={onClearItemHandler} onClearCartHandler={onClearCartHandler} />} />
+                    
+                   
+                    <Route path="/checkout" element=
+                    {<CheckoutPage cartItems={cartItems} />} />
+
+                  
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </main>
         </div>
+        
+      
     )
 }
 

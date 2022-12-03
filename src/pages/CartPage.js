@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
+import { Link } from "react-router-dom";
 
 
 function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler, onClearCartHandler }) {
@@ -25,11 +26,11 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
 
                 <table>
                     <tr>
-                        <th>Products Image</th>
-                        <th>Products Name</th>
-                        <th>Products Qty</th>
-                        <th>Qty x Price</th>
-                        <th>Total Price Per Item</th>
+                        <th>Gambar Produk</th>
+                        <th>Nama Produk</th>
+                        <th>Jumlah Produk</th>
+                        <th>Jumlah x Harga Satuan</th>
+                        <th>Total Harga Per Item</th>
                         <th></th>
                     </tr>
                         
@@ -87,7 +88,7 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
 
                     <tr className="cart-page-bottom">
                         <td>
-                            <button className="clear-all-button" onClick={() => onClearCartHandler()}>Clear All</button>
+                            <button className="clear-all-button" onClick={() => onClearCartHandler()}>Hapus Semua</button>
                         </td>
                         <td></td>
                         <td></td>
@@ -104,7 +105,9 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
                         </td>
 
                         <td>
-                            <button className="cart-page-buy-now">Buy Now</button>
+                           <Link to={`/checkout`}>
+                                <p className="cart-page-buy-now">Beli</p>
+                           </Link>
                         </td>
                     </tr>
 

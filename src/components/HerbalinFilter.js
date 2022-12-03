@@ -10,8 +10,9 @@ function HerbalinFilter({ selectedFilter, setSelectedFilter }){
 
             <select value={selectedFilter} onChange={(e) => setSelectedFilter(e.target.value)}>
                 <option value="">---</option>
-                <option value="Obat Tradisional">Obat Tradisional </option>
+                <option value="O.H. Terstandar">O.H. Terstandar </option>
                 <option value="Fitofarmaka">Fitofarmaka </option>
+                <option value="Jamu">Jamu</option>
             </select>
         </div>
     )

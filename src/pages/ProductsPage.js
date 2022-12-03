@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import HerbalinMainProd from "../components/HerbalinMainProd";
 import CurrencyFormat from "react-currency-format";
 
-
 function ProductsPage({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading }){
 
     const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
