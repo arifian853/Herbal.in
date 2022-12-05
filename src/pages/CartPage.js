@@ -24,69 +24,75 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
                 
                 {localStorage.setItem('cartItems', JSON.stringify(cartItems))}
 
-                <table>
-                    <tr>
-                        <th>Gambar Produk</th>
-                        <th>Nama Produk</th>
-                        <th>Jumlah Produk</th>
-                        <th>Jumlah x Harga Satuan</th>
-                        <th>Total Harga Per Item</th>
-                        <th></th>
-                    </tr>
+                <table key={cartItems}>
+                    <thead>
+                        <tr>
+                            <th>Gambar Produk</th>
+                            <th>Nama Produk</th>
+                            <th>Jumlah Produk</th>
+                            <th>Jumlah x Harga Satuan</th>
+                            <th>Harga</th>
+                            <th></th>
+                        </tr>
+
+                    </thead>
                         
-                    {cartItems.map((cartItem) => (
+                    <tbody>
+                        {cartItems.map((cartItem) => (
 
-                    <tr className="cart-item">
-                        <td>
-                            <img className="cart-item__img" src={cartItem.product_img} alt={cartItem.product_name} />
-                        </td>
+                        <tr className="cart-item" key={cartItem.id}>
+                            <td>
+                                <img className="cart-item__img" src={cartItem.product_img} alt={cartItem.product_name} />
+                            </td>
 
-                        <td>
-                            <div className="cart-item-spec">
-                                <p>{cartItem.product_name}</p>
-                                <p>{cartItem.product_ctg}</p>
-                            </div>
-                        </td>
+                            <td>
+                                <div className="cart-item-spec">
+                                    <p>{cartItem.product_name}</p>
+                                    <p>{cartItem.product_ctg}</p>
+                                </div>
+                            </td>
 
-                        <td>
-                            <div className="cart-item-button-group">
-                
-                                <button onClick={() => onRemoveHandler(cartItem)}> - </button>
-                                    <p className="cart-item__qty">{cartItem.product_qty}</p>
+                            <td>
+                                <div className="cart-item-button-group">
 
-                                <button onClick={() => onAddHandler(cartItem)}> + </button>
-                            
+                                    <button onClick={() => onRemoveHandler(cartItem)}> - </button>
+                                        <p className="cart-item__qty">{cartItem.product_qty}</p>
+
+                                    <button onClick={() => onAddHandler(cartItem)}> + </button>
                                 
-                                {localStorage.setItem('cartItems', JSON.stringify(cartItems))}
+                                    
+                                    {localStorage.setItem('cartItems', JSON.stringify(cartItems))}
 
-                            </div>
-                        </td>
+                                </div>
+                            </td>
 
-                        <td>
-                            <div className="total-price-per-item-text">
-                                {cartItem.product_qty} x <CurrencyFormat value={cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} />
-                            </div>
-                        </td>
+                            <td>
+                                <div className="total-price-per-item-text">
+                                    {cartItem.product_qty} x <CurrencyFormat value={cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} />
+                                </div>
+                            </td>
 
-                        <td>
-                            <div className="total-price-per-item">
-                                <CurrencyFormat value={cartItem.product_qty * cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /> 
-                            </div>
-                        </td>
+                            <td>
+                                <div className="total-price-per-item">
+                                    <CurrencyFormat value={cartItem.product_qty * cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /> 
+                                </div>
+                            </td>
 
-                        <td>
-                            <div className="remove-item">
-                                <button onClick={() => onClearItemHandler(cartItem)}><MdOutlineDeleteOutline /></button>
-                                
-                                {localStorage.setItem('cartItems', JSON.stringify(cartItems))}
-                            </div>
-                        </td>
-                    </tr>
+                            <td>
+                                <div className="remove-item">
+                                    <button onClick={() => onClearItemHandler(cartItem)}><MdOutlineDeleteOutline /></button>
+                                    
+                                    {localStorage.setItem('cartItems', JSON.stringify(cartItems))}
+                                </div>
+                            </td>
+                        </tr>       
 
-                     
-                    ))}
+                        ))}
+                    </tbody>
+                   
 
-                    <tr className="cart-page-bottom">
+                   <tfoot>
+                        <tr className="cart-page-bottom">
                         <td>
                             <button className="clear-all-button" onClick={() => onClearCartHandler()}>Hapus Semua</button>
                         </td>
@@ -97,7 +103,7 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
                         <td>
                             <div className="total-price-all-items">
                                 <p>
-                                    Grand Total :   
+                                    Total Harga :   
                                     <CurrencyFormat value={cartItems.reduce((prevItem, currentItem) => prevItem + currentItem.product_qty * currentItem.product_price, 0 )} displayType={'text'} thousandSeparator={true} prefix={'  Rp. '} />
                                 </p>
                             </div>
@@ -109,7 +115,8 @@ function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler
                                 <p className="cart-page-buy-now">Beli</p>
                            </Link>
                         </td>
-                    </tr>
+                        </tr>
+                   </tfoot>
 
                 </table>
                 

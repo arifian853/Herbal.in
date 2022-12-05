@@ -12,6 +12,7 @@ import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import AddArticle from "./pages/AddArticle";
+import OrderReceivedPage from "./pages/OrderReceivedPage";
 
 
 function App() {
@@ -106,7 +107,8 @@ function App() {
                     
                    
                     <Route path="/checkout" element=
-                    {<CheckoutPage cartItems={cartItems} />} />
+                    {<CheckoutPage cartItems={cartItems} setCartItems={setCartItems} />} />
+                    <Route path="/order-received" element={<OrderReceivedPage />} />
 
                   
                     <Route path="*" element={<NotFoundPage />} />

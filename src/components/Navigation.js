@@ -17,6 +17,8 @@ function Navigation({ logout, name, cartItems }){
             setActiveTab('Products');
         } else if(location.pathname === '/cart'){
             setActiveTab('Cart');
+        } else {
+            setActiveTab('');
         }
     }, [location]);
 

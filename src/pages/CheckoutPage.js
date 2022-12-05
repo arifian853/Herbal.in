@@ -1,89 +1,124 @@
 import React from "react";
-
-
+import PropTypes from "prop-types";
 import GooglePayButton from "@google-pay/button-react";
+import CurrencyFormat from "react-currency-format";
+import { useNavigate } from "react-router-dom";
 
-function CheckoutPage({ cartItems }){
+
+function CheckoutPage({ cartItems, setCartItems }){
+    const navigate = useNavigate();
     const total = cartItems.reduce((prevItem, currentItem) => prevItem + currentItem.product_qty * currentItem.product_price, 0 );
     return (
         <div className="checkout-page">
-            <h1>Checkout</h1>
-                <p>Silahkan lakukan pembayaran ...</p>
-        {cartItems.map((cartItem) => (
+            <h1 className="checkout-page-text">Checkout</h1>
+            <hr />
 
+               
+            <div className="checkout-order-data">
+                
+              <p>Pesanan Kamu</p>
+                  
+              <table>
+                <thead>
+
+                  <tr>
+
+                        <th>Nama Produk</th>
+                        <th>Jumlah</th>
+                        <th>Harga</th>
+
+                  </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                  {
+                    cartItems.map((cartItem) => (
+
+                    <tr key={cartItem.id}>
+                      <td className="name">{cartItem.product_name}</td>
+                      <td className="qty">{cartItem.product_qty}</td>
+                      <td className="price"> <CurrencyFormat value={cartItem.product_qty * cartItem.product_price} displayType={'text'} thousandSeparator={true} prefix={' Rp. '} /> </td>
+                    </tr> ))
+                      
+                  }
+
+                </tbody>
+
+
+                <tfoot>
+                  <tr>
+                    <td colSpan="3" className="total">Total yang harus dibayar adalah : <CurrencyFormat value={total} displayType={'text'} thousandSeparator={true} prefix={'  Rp. '} /></td>
+                  </tr>
+
+                </tfoot>
+
+
+              </table>
+            </div>
         
-        <div>
-                
-                
-                <div>
-                    <p>Nama :{cartItem.product_name}</p>
-                    <p>Qty : {cartItem.product_qty}</p>
-                    <p>Price : {cartItem.product_price}</p>
-                    <p>Qty x Price: {cartItem.product_qty * cartItem.product_price}</p>
+       
+            <GooglePayButton 
+              environment="TEST"
+              paymentRequest={{
+              apiVersion: 2,
+              apiVersionMinor: 0,
+              allowedPaymentMethods: [
+                {
+                  type: 'CARD',
+                  parameters: {
+                    allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+                    allowedCardNetworks: ['MASTERCARD', 'VISA'],
+                  },
+                  tokenizationSpecification: {
+                    type: 'PAYMENT_GATEWAY',
+                    parameters: {
+                      gateway: 'example',
+                      gatewayMerchantId: 'exampleGatewayMerchantId',
+                    },
+                  },
+                },
+              ],
+              merchantInfo: {
+                merchantId: '12345678901234567890',
+                merchantName: 'Demo Merchant',
+              },
+              transactionInfo: {
+                totalPriceStatus: 'FINAL',
+                totalPriceLabel: 'Total',
+                totalPrice: `${total}`,
+                currencyCode: 'IDR',
+                countryCode: 'ID',
+              },
 
-                </div>
+              shippingAddressRequired: true,
+              callbackIntents: ['PAYMENT_AUTHORIZATION'],
 
-            
-          
-        </div>
-        ))}
+              }}
+  
+              onPaymentAuthorized={paymentData => {    
+                navigate('/order-received');
+                setCartItems([]);
+                  return { transactionState: 'SUCCESS'}
+              }}
 
-       <p>Total yang harus dibayar adalah : {total}</p>
+              existingPaymentMethodRequired='false'
+              buttonColor="default"
+              buttonType="pay"
+              buttonLocale="id"
 
-        <GooglePayButton
-  environment="TEST"
-  paymentRequest={{
-    apiVersion: 2,
-    apiVersionMinor: 0,
-    allowedPaymentMethods: [
-      {
-        type: 'CARD',
-        parameters: {
-          allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-          allowedCardNetworks: ['MASTERCARD', 'VISA'],
-        },
-        tokenizationSpecification: {
-          type: 'PAYMENT_GATEWAY',
-          parameters: {
-            gateway: 'example',
-            gatewayMerchantId: 'exampleGatewayMerchantId',
-          },
-        },
-      },
-    ],
-    merchantInfo: {
-      merchantId: '12345678901234567890',
-      merchantName: 'Demo Merchant',
-    },
-    transactionInfo: {
-      totalPriceStatus: 'FINAL',
-      totalPriceLabel: 'Total',
-      totalPrice: `${total}`,
-      currencyCode: 'IDR',
-      countryCode: 'ID',
-    },
-
-    shippingAddressRequired: true,
-    callbackIntents: ['PAYMENT_AUTHORIZATION'],
-  }}
-  onLoadPaymentData={paymentRequest => {
-    console.log('load payment data', paymentRequest);
-  }}
-
-  onPaymentAuthorized={paymentData => {
-    console.log("Payment Authorised Success", paymentData);
-    return { transactionState: 'SUCCESS'}
-  }}
-
-  existingPaymentMethodRequired='false'
-  buttonColor="black"
-  buttonType="Buy"
-/>
-            
+              
+            />
 
         </div>
-    
     )
+}
+
+CheckoutPage.propTypes = {
+  cartItems: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setCartItems: PropTypes.func
 }
 
 
