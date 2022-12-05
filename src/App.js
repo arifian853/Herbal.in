@@ -14,9 +14,6 @@ import CheckoutPage from "./pages/CheckoutPage";
 import AddArticle from "./pages/AddArticle";
 
 
-
-
-
 function App() {
     const [loading, setLoading] = React.useState(true);
     const [ productItems, setProductItems ] = React.useState([]);
@@ -82,8 +79,10 @@ function App() {
 
     return (
        
-
         <div className="herbalin-app">
+               
+
+
             <header className="herbalin-app__header">
                 <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                 <p className="herbalin-app__header_title">Herbal.in</p>
