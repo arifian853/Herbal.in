@@ -9,4 +9,59 @@ async function getAllProducts(){
 
 }
 
-export { getAllProducts };
+async function addProduct({productItems}){
+    const response = await fetch(`${BASE_URL}/products`, {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+  
+      body: JSON.stringify({ productItems })
+    })
+  
+    const responseJson = await response.json();
+    
+    if(responseJson.status !== 'success'){
+      return {error: true};
+  }
+  
+  return {error : false};
+  }
+  
+  
+  // untuk update belum diimplementasikan
+  async function updateProduct(id, productItems ){
+    const response = await fetch(`${BASE_URL}/articles/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({ productItems })
+  
+    })
+  
+    const responseJson = await response.json();
+  
+    if(responseJson.status !== 'success'){
+        return {error : true};
+    }
+  
+    return { error: false};
+  }
+  
+  async function deleteProduct(id) {
+    const response = await fetch(`${BASE_URL}/products/${id}`, {
+      method: 'DELETE',
+    });
+  
+    const responseJson = await response.json();
+  
+    if (responseJson.status !== 'success') {
+      return { error: true, data: null };
+    }
+  
+    return { error: false, data: responseJson.data };
+  }
+  
+
+export { getAllProducts, addProduct, updateProduct, deleteProduct };
