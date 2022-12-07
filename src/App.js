@@ -15,16 +15,22 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import { SecureRoute } from "./components/SecureRoute";
+import { AdminLogin } from "./pages/AdminLogin";
+import { Editing } from "./pages/Editing";
+import CheckoutPage from "./pages/CheckoutPage";
+
+import EditArticles from "./pages/EditArticles";
+import AddArticles from "./pages/AddArticles";
 
 function App() {
-    const [ loading, setLoading ] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [ productItems, setProductItems ] = useState([]);
-    const [ cartItems, setCartItems ] = useState([]);
+    const [ cartItems, setCartItems ] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [] );
     const [ searchParams, setSearchParams ] = useSearchParams();
     const [ keyword, setKeyword ] = useState(() => {
         return searchParams.get('keyword') || ''
     })
-    const [ selectedFilter, setSelectedFilter ] = useState();
+    const [ selectedFilter, setSelectedFilter ] =useState();
     
 
     useEffect(() => {
@@ -50,12 +56,13 @@ function App() {
     function onAddHandler(productItem){
         const productPresent = cartItems.find((cartItem) => cartItem.id === productItem.id);
 
-       if(!productPresent){
+        if(!productPresent){
              setCartItems([...cartItems, {...productItem, product_qty: 1 }]);
-      
-       } else {
+            
+        } else {
             setCartItems(cartItems.map((cartItem) => cartItem.id === productItem.id ? {...productPresent, product_qty: productPresent.product_qty + 1} : cartItem));
-       }
+        }
+        localStorage.setItem('cartItems', JSON.stringify(cartItems))
     }
 
     function onRemoveHandler(productItem){
@@ -84,9 +91,14 @@ function App() {
             <main>
                 <UserAuthContextProvider>
                     <Routes>
+
+                        {/* Login and Register */}
                         <Route path="/" element={<LandingPage />}></Route>
+                        <Route path="/admin-herbalin-login" element={<AdminLogin> </AdminLogin>}></Route>
                         <Route path="/register" element={<RegisterPage />}></Route>
                         <Route path="/login" element={<LoginPage />}></Route>
+
+                        {/* Home */}
                         <Route path="/home" element={
                         <SecureRoute>
                             <header className="herbalin-app__header">
@@ -97,6 +109,8 @@ function App() {
                             <HomePage onAddHandler={onAddHandler} />
                         </SecureRoute>
                         } />
+
+                        {/* Articles */}
                         <Route path="/articles" element={ 
                         <SecureRoute>
                             <header className="herbalin-app__header">
@@ -106,6 +120,8 @@ function App() {
                             </header>
                             <ArticlesPage />
                             </SecureRoute>} />
+
+                        {/* Article Details */}
                         <Route path="/articles/:id" element={
                         <SecureRoute>
                             <header className="herbalin-app__header">
@@ -115,6 +131,8 @@ function App() {
                             </header>
                             <ArticlesDetailPageWrapper />
                         </SecureRoute>} />
+                        
+                        {/* Products */}
                         <Route path="/products" element={
                         <SecureRoute>
                              <header className="herbalin-app__header">
@@ -123,7 +141,9 @@ function App() {
                                 <Navigation cartItems={cartItems} />
                             </header>
                             <ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />
-                        </SecureRoute>}></Route>
+                        </SecureRoute>} />
+
+                        {/* Product Details */}
                         <Route path="/products/:id" element={
                             <SecureRoute>
                                 <header className="herbalin-app__header">
@@ -133,6 +153,8 @@ function App() {
                                 </header>
                                 <DetailPage products={productItems} onAddHandler={onAddHandler} />
                             </SecureRoute>} />
+
+                        {/* Cart */}
                         <Route path="/cart" element={
                             <SecureRoute>
                                 <header className="herbalin-app__header">
@@ -143,9 +165,72 @@ function App() {
                                 <CartPage cartItems={cartItems} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} onClearItemHandler={onClearItemHandler} onClearCartHandler={onClearCartHandler} />
                             </SecureRoute>
                         } />
+                        {/* Checkout Page */}
+                        <Route path="/checkout" element={<CheckoutPage cartItems={cartItems} setCartItems={setCartItems} />} />
+
+                        {/* Not Found Page */}
                         <Route path="*" element={<NotFoundPage />} />
+
+
+                        {/* Admin Routes */}
+                        {/* Edit page */}
+                        <Route path="/editing" element={
+                            
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in - Admin</p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <Editing />
+                            </SecureRoute>
+                        
+                        } />
+
+                        {/* Add or delete Article page */}
+                        <Route path="/admin-herbalin-artikel-edit" element={
+                            
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in - Admin </p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <EditArticles />
+                            </SecureRoute>
+                        
+                        } />
+
+                        {/* Add Article page */}
+                        <Route path="/admin-herbalin-artikel-add" element={
+                            
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in - Admin </p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <AddArticles />
+                            </SecureRoute>
+                        
+                        } />
+
+                        {/* Add or delete Products page */}
+                        <Route path="/admin-herbalin-produk-edit" element={
+                            
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in - Admin </p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <AddArticles />
+                            </SecureRoute>
+                        
+                        } />
                     </Routes>
                 </UserAuthContextProvider>
+            
                 
             </main>
         </div>

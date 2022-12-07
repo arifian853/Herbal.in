@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const HerbalinFilter = ({ selectedFilter, setSelectedFilter }) => {
+function HerbalinFilter({ selectedFilter, setSelectedFilter }){
     return (
         <div className="filter-item">
             <label>
-                Filter kategori:
+                Filter berdasarkan kategori :
             </label> 
 
             <select value={selectedFilter} onChange={(e) => setSelectedFilter(e.target.value)}>
                 <option value="">---</option>
-                <option value="Obat Tradisional">Obat Tradisional</option>
-                <option value="Fitofarmaka">Fitofarmaka</option>
+                <option value="O.H. Terstandar">O.H. Terstandar </option>
+                <option value="Fitofarmaka">Fitofarmaka </option>
+                <option value="Jamu">Jamu</option>
             </select>
         </div>
     )

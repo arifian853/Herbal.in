@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import HerbalinSearch from "./HerbalinSearch";
 import HerbalinFilter from "./HerbalinFilter";
 
-const HerbalinMainProd = ({ keyword, keywordChange, selectedFilter, setSelectedFilter }) => {
+function HerbalinMainProd({ keyword, keywordChange, selectedFilter, setSelectedFilter }){
     return (
         <div>
             <h1 className="product-page-text">Product Page</h1>

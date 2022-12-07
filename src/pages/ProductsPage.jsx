@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import HerbalinMainProd from "../components/HerbalinMainProd";
 import CurrencyFormat from "react-currency-format";
 import { Helmet } from 'react-helmet';
+import { Footer } from "../components/Footer";
 
 const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading }) => {
 
@@ -50,6 +51,7 @@ const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, sele
                                 <button className="product-item__addToCart" onClick={() => onAddHandler(productItem)}>Add to Cart</button>
                             </div>
                         </div>
+                        
                     ))
 
                     :
@@ -75,6 +77,7 @@ const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, sele
                 } 
                     
             </div>
+            <Footer></Footer>
         </div>
     );
 };

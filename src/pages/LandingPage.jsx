@@ -26,6 +26,9 @@ export const LandingPage = () => {
                 <br />
                 <Link to="/login">
                 <button>Selengkapnya</button>
+                </Link> <br /> <br />
+                <Link to="/admin-herbalin-login">
+                <button>ADMIN</button>
                 </Link>
             </div>
 
