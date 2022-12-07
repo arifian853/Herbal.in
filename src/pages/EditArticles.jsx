@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ArticlesBodyAdmin from "../components/ArticleBodyAdmin";
 import { getArticles, deleteArticle } from "../utils/api_articles"; 
 import { FiBookOpen } from "react-icons/fi" ;
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 import { FiPlus } from "react-icons/fi";
 
 
@@ -13,7 +13,7 @@ const EditArticles = () => {
     const [articles, setArticles] = React.useState([]);
 
     
-    React.useEffect(() => {
+    useEffect(() => {
         getArticles().then(({ data }) => {
             setArticles(data);
             setLoading(false);
@@ -41,11 +41,16 @@ const EditArticles = () => {
 
     return (
         <div className="article-page">
+            <Helmet>
+                <title>Herbal.in - Artikel
+                    
+                </title>
+            </Helmet>
             <h1><FiBookOpen></FiBookOpen> Edit Artikel</h1>
             <ArticlesBodyAdmin articles={articles} onDelete={onDeleteHandler} />
             <Link to="/admin-herbalin-artikel-add"> 
             <div className="article-page-action"><FiPlus className="action" /></div>
-    </Link>
+            </Link>
         </div>
     )
 }

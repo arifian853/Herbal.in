@@ -959,4 +959,11 @@ footer {
     height: 20vh;
 }
 
+.delete-button {
+    border: 1px solid var(--black);
+    background-color: red;
+    color: var(--white);
+    padding: 7px;
+}
+
 /*Add Products*/

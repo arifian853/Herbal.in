@@ -14,7 +14,7 @@ function ArticleItemAdmin({ id, createdAt, article_title, article_image, article
                 <hr />
                 <p className="article-item__description">{article_description}</p>
                 <p className="article-item__readMoreUrl"><Link to={`/articles/${id}`}>Read More</Link></p>
-                <button className="article-delete-button" id={id} onClick={() => onDelete(id)}>Delete</button>
+                <button className="delete-button" id={id} onClick={() => onDelete(id)}>Delete</button>
             </div>
         </div>
     )

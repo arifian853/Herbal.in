@@ -21,6 +21,8 @@ import CheckoutPage from "./pages/CheckoutPage";
 
 import EditArticles from "./pages/EditArticles";
 import AddArticles from "./pages/AddArticles";
+import EditProducts from "./pages/EditProducts";
+import AddProducts from "./pages/AddProducts";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -224,7 +226,21 @@ function App() {
                                 <p className="herbalin-app__header_title">Herbal.in - Admin </p>
                                 <Navigation cartItems={cartItems} />
                             </header>
-                            <AddArticles />
+                            <EditProducts keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />
+                            </SecureRoute>
+                        
+                        } />
+
+                        {/* Add or delete Products page */}
+                        <Route path="/admin-herbalin-produk-add" element={
+                            
+                            <SecureRoute>
+                                <header className="herbalin-app__header">
+                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
+                                <p className="herbalin-app__header_title">Herbal.in - Admin </p>
+                                <Navigation cartItems={cartItems} />
+                            </header>
+                            <AddProducts />
                             </SecureRoute>
                         
                         } />
