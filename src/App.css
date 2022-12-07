@@ -120,7 +120,6 @@ html {
   color: var(--black);
   text-align: center;
   font-size: 200%;
-  padding: 0;
   margin: 0;
 }
 
@@ -181,6 +180,62 @@ html {
   height: fit-content;
   background: var(--green1);
 }
+
+/*-- image slider --*/
+
+.offer {
+  background-color: var(--green1);
+}
+
+.slideStyles {
+  width: 100%;
+  height: 70%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  gap: 150%;
+}
+
+.rightArrowStyles {
+  display: inline;
+  font-size: 45px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.leftArrowStyles {
+  display: inline;
+  font-size: 45px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sliderStyles {
+  height: 100%;
+}
+
+.dotsContainerStyles {
+  justify-content: center;
+  display: flex;
+  gap: 5%;
+}
+
+.dotsStyles {
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.containerStyles {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*-- image slider --*/
 
 /*-- Login Page --*/
 
