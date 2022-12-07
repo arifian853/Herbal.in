@@ -21,8 +21,8 @@ import CheckoutPage from "./pages/CheckoutPage";
 
 import EditArticles from "./pages/EditArticles";
 import AddArticles from "./pages/AddArticles";
-import EditProducts from "./pages/EditProducts";
-import AddProducts from "./pages/AddProducts";
+// import EditProducts from "./pages/EditProducts";
+// import AddProducts from "./pages/AddProducts";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -84,7 +84,6 @@ function App() {
     function onClearCartHandler(){
         setCartItems([]);
     }
-
 
     return (
         <div className="herbalin-app">
@@ -217,7 +216,7 @@ function App() {
                         
                         } />
 
-                        {/* Add or delete Products page */}
+                        {/* Add or delete Products page
                         <Route path="/admin-herbalin-produk-edit" element={
                             
                             <SecureRoute>
@@ -226,12 +225,12 @@ function App() {
                                 <p className="herbalin-app__header_title">Herbal.in - Admin </p>
                                 <Navigation cartItems={cartItems} />
                             </header>
-                            <EditProducts keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />
+                            <EditProducts keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} onDeleteHandler={onDeleteHandler} />
                             </SecureRoute>
                         
-                        } />
+                        } /> */}
 
-                        {/* Add or delete Products page */}
+                        {/* Add or delete Products page
                         <Route path="/admin-herbalin-produk-add" element={
                             
                             <SecureRoute>
@@ -243,7 +242,7 @@ function App() {
                             <AddProducts />
                             </SecureRoute>
                         
-                        } />
+                        } /> */}
                     </Routes>
                 </UserAuthContextProvider>
             

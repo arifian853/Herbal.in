@@ -5,9 +5,8 @@ import HerbalinMainProd from "../components/HerbalinMainProd";
 import CurrencyFormat from "react-currency-format";
 import { Helmet } from 'react-helmet';
 import { Footer } from "../components/Footer";
-// import { deleteProduct } from "../utils/api_products";
 
-const EditProducts = ({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading, id, onDelete }) => {
+const EditProducts = ({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading, id, onDeleteHandler }) => {
 
     const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
     const ctgFilteredProducts = productItems.filter((productItem) => productItem.product_ctg === selectedFilter);
@@ -50,7 +49,7 @@ const EditProducts = ({ productItems, onAddHandler, keyword, keywordChange, sele
 
                             <div className="add-to-cart">
                                 <button className="product-item__addToCart" onClick={() => onAddHandler(productItem)}>Add to Cart</button> <br /> <br />
-                                <button className="delete-button" id={id} onClick={() => onDelete(id)}>Delete</button>
+                                <button className="delete-button" id={id} onClick={() => onDeleteHandler(id)}>Delete</button>
                             </div>
                         </div>
                         
@@ -72,7 +71,7 @@ const EditProducts = ({ productItems, onAddHandler, keyword, keywordChange, sele
 
                             <div className="add-to-cart">
                                 <button className="product-item__addToCart" onClick={() => onAddHandler(productItem)}>Add to Cart</button> <br /> <br />
-                                <button className="delete-button" id={id} onClick={() => onDelete(id)}>Delete</button>
+                                <button className="delete-button" id={id} onClick={() => onDeleteHandler(id)}>Delete</button>
                             </div>
                         </div>
                         
