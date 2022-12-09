@@ -6,16 +6,19 @@ import CurrencyFormat from "react-currency-format";
 import { Helmet } from 'react-helmet';
 import { Footer } from "../components/Footer";
 
+import { ThemeContext } from "../context/ThemeContext";
+
 const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading }) => {
 
     const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
     const ctgFilteredProducts = productItems.filter((productItem) => productItem.product_ctg === selectedFilter);
     const searchFilteredProducts = ctgFilteredProducts.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
 
+    const { theme } = React.useContext(ThemeContext);
 
     if(loading){
         return (
-            <div className="loading">
+            <div className="loading" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
                 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </div>
         )
@@ -27,11 +30,11 @@ const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, sele
             <Helmet>
                 <title>Herbal.in - Produk</title>
             </Helmet>
-            <div className="products-page-main">
+            <div className="products-page-main" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
                 <HerbalinMainProd keyword={keyword} keywordChange={keywordChange} selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter}/>
             </div>
 
-            <div className="product-list">
+            <div className="product-list" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
                 {
                     searchFilteredProducts.length > 0 ? 
                 
@@ -39,7 +42,7 @@ const ProductsPage = ({ productItems, onAddHandler, keyword, keywordChange, sele
 
                         <div className="product-item" key={productItem.id}>
                             <div className="prod-item__image">
-                                <img src={productItem.product_img} alt="herbalin product" />
+                            <img src={productItem.product_img} alt="herbalin product"/>
                             </div>
 
                             <p className="prod-item__ctg">{productItem.product_ctg}</p>

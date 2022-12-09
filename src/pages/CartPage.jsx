@@ -4,10 +4,14 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
 import { Link } from "react-router-dom";
 
+import { ThemeContext } from "../context/ThemeContext";
+
 function CartPage({ cartItems, onAddHandler, onRemoveHandler, onClearItemHandler, onClearCartHandler }) {
+    const { theme } = React.useContext(ThemeContext);
+
 
     return (
-        <div className="cart-page">
+        <div className="cart-page" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
             <h1 className="cart-page-text">Cart Page</h1>
             <hr />
             {

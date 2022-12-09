@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import { Link, useLocation } from "react-router-dom";
 import { FiLogOut } from "react-icons/fi";
 import { useUserAuth } from "../context/UserAuthContext";
-
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Navigation = ({ cartItems }) => {
 
@@ -18,6 +20,8 @@ const Navigation = ({ cartItems }) => {
 
     const [ activeTab, setActiveTab ] = useState("Home");
     const location = useLocation();
+
+    const { toggle, darkMode } = React.useContext(ThemeContext);
 
     useEffect(() => {
         if(location.pathname === '/home'){
@@ -55,6 +59,8 @@ const Navigation = ({ cartItems }) => {
                 <li className={`${activeTab === 'Cart' ? 'active-tab' : ''}`} onClick={() => setActiveTab("Cart")}>Cart <span className='badge  badge-warning' id='lblCartCount'>{cartItems.length}</span>
                 </li>
                 </Link>
+
+            <button className="toggle-theme" onClick={toggle} > {!darkMode ? <MdDarkMode /> : <MdLightMode /> }</button>
 
                 <li id="nav_username"><button onClick={handleLogout}>{user && user.email}<FiLogOut /></button></li>
             </ul>

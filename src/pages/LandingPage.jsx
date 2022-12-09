@@ -5,7 +5,9 @@ import { Testimoni } from './Testimoni';
 import { Teams } from './Teams';
 import { Offer } from './Offer';
 
+
 export const LandingPage = () => {
+
     return (
     <div>
         <Helmet>
@@ -16,6 +18,7 @@ export const LandingPage = () => {
         <a href="#testimoni">Testimoni</a>
         <a href="#offer">Offer</a>
         <a href="#contact">About Us</a>
+
     </div>
       
     <div className="main" id="home">
@@ -34,6 +37,11 @@ export const LandingPage = () => {
             <br />
             <Link to="/login">
                 <button>Selengkapnya</button>
+            </Link>
+
+            <br /> <br />
+            <Link to="/admin-herbalin-login">
+                <button>ADMIN</button>
             </Link>
         </div>
     

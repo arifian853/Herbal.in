@@ -22,10 +22,11 @@ import OrderReceivedPage from "./pages/OrderReceivedPage";
 
 import EditArticles from "./pages/EditArticles";
 import AddArticles from "./pages/AddArticles";
-// import EditProducts from "./pages/EditProducts";
-// import AddProducts from "./pages/AddProducts";
+
 
 function App() {
+ 
+      
     const [loading, setLoading] = useState(true);
     const [ productItems, setProductItems ] = useState([]);
     const [ cartItems, setCartItems ] = useState(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [] );
@@ -34,7 +35,6 @@ function App() {
         return searchParams.get('keyword') || ''
     })
     const [ selectedFilter, setSelectedFilter ] =useState();
-    
 
     useEffect(() => {
         getAllProducts().then(({ data }) => {
@@ -88,8 +88,7 @@ function App() {
 
     return (
         <div className="herbalin-app">
-            
-
+        
             <main>
                 <UserAuthContextProvider>
                     <Routes>
@@ -107,6 +106,7 @@ function App() {
                                 <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                                 <p className="herbalin-app__header_title">Herbal.in</p>
                                 <Navigation cartItems={cartItems} />
+                        
                             </header>
                             <HomePage onAddHandler={onAddHandler} />
                         </SecureRoute>
@@ -119,8 +119,10 @@ function App() {
                                 <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                                 <p className="herbalin-app__header_title">Herbal.in</p>
                                 <Navigation cartItems={cartItems} />
+                        
+
                             </header>
-                            <ArticlesPage />
+                            <ArticlesPage/>
                             </SecureRoute>} />
 
                         {/* Article Details */}
@@ -130,6 +132,8 @@ function App() {
                                 <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                                 <p className="herbalin-app__header_title">Herbal.in</p>
                                 <Navigation cartItems={cartItems} />
+                        
+
                             </header>
                             <ArticlesDetailPageWrapper />
                         </SecureRoute>} />
@@ -141,6 +145,8 @@ function App() {
                                 <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                                 <p className="herbalin-app__header_title">Herbal.in</p>
                                 <Navigation cartItems={cartItems} />
+                        
+
                             </header>
                             <ProductsPage keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} />
                         </SecureRoute>} />
@@ -152,6 +158,8 @@ function App() {
                                     <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                                     <p className="herbalin-app__header_title">Herbal.in</p>
                                     <Navigation cartItems={cartItems} />
+                            
+
                                 </header>
                                 <DetailPage products={productItems} onAddHandler={onAddHandler} />
                             </SecureRoute>} />
@@ -163,6 +171,8 @@ function App() {
                                     <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
                                     <p className="herbalin-app__header_title">Herbal.in</p>
                                     <Navigation cartItems={cartItems} />
+                            
+                                    
                                 </header>
                                 <CartPage cartItems={cartItems} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} onClearItemHandler={onClearItemHandler} onClearCartHandler={onClearCartHandler} />
                             </SecureRoute>
@@ -220,33 +230,7 @@ function App() {
                         
                         } />
 
-                        {/* Add or delete Products page
-                        <Route path="/admin-herbalin-produk-edit" element={
-                            
-                            <SecureRoute>
-                                <header className="herbalin-app__header">
-                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
-                                <p className="herbalin-app__header_title">Herbal.in - Admin </p>
-                                <Navigation cartItems={cartItems} />
-                            </header>
-                            <EditProducts keyword={keyword} keywordChange={onKeywordChangeHandler} onAddHandler={onAddHandler} selectedFilter={selectedFilter} setSelectedFilter={onSelectedFilterHandler} productItems={productItems} loading={loading} onDeleteHandler={onDeleteHandler} />
-                            </SecureRoute>
-                        
-                        } /> */}
-
-                        {/* Add or delete Products page
-                        <Route path="/admin-herbalin-produk-add" element={
-                            
-                            <SecureRoute>
-                                <header className="herbalin-app__header">
-                                <img src="images/leaf.png" alt="logo" className="herbalin-app__header_logo" />
-                                <p className="herbalin-app__header_title">Herbal.in - Admin </p>
-                                <Navigation cartItems={cartItems} />
-                            </header>
-                            <AddProducts />
-                            </SecureRoute>
-                        
-                        } /> */}
+                    
                     </Routes>
                 </UserAuthContextProvider>
             

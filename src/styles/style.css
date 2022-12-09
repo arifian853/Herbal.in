@@ -73,6 +73,14 @@ a:-webkit-any-link {
     background: var(--white);
 }
 
+button.toggle-theme {
+    cursor: pointer;
+    font-size: 25px;
+    padding-left: 10px;
+    background: transparent;
+    border: none;
+}
+
 .testimoni {
     background-color: var(--green1);
 }
@@ -218,7 +226,10 @@ a:-webkit-any-link {
 .loading {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    padding-top: 100px;
+    width: 100%;
+    height: 800px;
 }
 
 .lds-ellipsis {
@@ -485,7 +496,7 @@ li.active-tab {
 /* Home Page */
 
 .home-page .home-page__banner {
-    margin: 30px auto;
+    margin: 0 auto;
     width: 90%;
     background-image: url('../../public/images/leaf.png');
     background-color: #97cfa9;
@@ -525,6 +536,7 @@ li.active-tab {
     margin: 20px 10px;
     padding: 10px;
     background-color: rgb(182, 212, 137);
+    color: #07521f;
     border: 3px solid rgb(174, 212, 118);
     border-radius: 10px;
 }
@@ -586,8 +598,9 @@ th {
 }
 
 .cart-page {
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
 }
 
 .cart-page hr {
@@ -685,7 +698,8 @@ th {
 /* Articles Page */
 
 .article-page h1 {
-    margin: 20px 30px;
+    margin: 0px 30px;
+    padding-top: 30px;
 }
 
 .article-body {
@@ -765,8 +779,9 @@ th {
 /* Articles Detail */
 
 .article-detail {
-    width: 80%;
-    margin: 40px auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 70px;
     text-align: center;
 }
 
@@ -816,14 +831,13 @@ th {
 
 .product-page-text {
     text-align: center;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .product-list {
     width: 100%;
-    padding: 5px;
+    padding: 40px;
     text-align: justify;
-    margin: 10px 45px;
 }
 
 .product-item {
@@ -855,6 +869,7 @@ th {
     text-align: center;
     margin: 10px 30px;
     background-color: #CFFF8D;
+    color: #07521f;
     border-radius: 15px;
 }
 
@@ -889,7 +904,10 @@ th {
 /* Product Detail */
 
 .detail-page {
-    margin: 40px auto;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    /* padding-bottom: 12s0px; */
     width: 80%;
     display: flex;
 }
@@ -915,7 +933,8 @@ th {
 
 .detail-page-addition {
     width: 80%;
-    margin: 0 auto;
+    margin: 40px auto 0;
+    padding-bottom: 10px;
 }
 
 .detail-page-addition .detail-page__text {
@@ -945,7 +964,7 @@ th {
 
 .filter-item {
     text-align: right;
-    margin: 10px 75px;
+    padding-right: 75px;
     color: #54BAB9;
     font-weight: 500;
 }
@@ -964,8 +983,10 @@ th {
 /* Checkout Page */
 
 .checkout-page {
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    height: 610px;
+    margin: 0 auto;
+    padding: 30px;
     text-align: center;
 }
 

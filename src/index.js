@@ -6,10 +6,13 @@ import { BrowserRouter } from "react-router-dom";
 // Styling
 import './styles/style.css';
 import './styles/responsive.css';
+import { ThemeProvider } from "./context/ThemeContext";
 
 const root = createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <App />
+        <ThemeProvider>
+            <App />
+        </ThemeProvider>
     </BrowserRouter>
 );

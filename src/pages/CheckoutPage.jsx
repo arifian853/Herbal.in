@@ -4,13 +4,16 @@ import GooglePayButton from "@google-pay/button-react";
 import CurrencyFormat from "react-currency-format";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet';
+import { ThemeContext } from "../context/ThemeContext";
 
 
 function CheckoutPage({ cartItems, setCartItems }){
     const navigate = useNavigate();
     const total = cartItems.reduce((prevItem, currentItem) => prevItem + currentItem.product_qty * currentItem.product_price, 0 );
+    const { theme } = React.useContext(ThemeContext);
+
     return (
-        <div className="checkout-page">
+        <div className="checkout-page" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
             <Helmet>
                 <title>Herbal.in - Checkout</title>
             </Helmet>
@@ -108,11 +111,12 @@ function CheckoutPage({ cartItems, setCartItems }){
                   return { transactionState: 'SUCCESS'}
               }}
 
+              
               existingPaymentMethodRequired='false'
-              buttonColor="default"
+              buttonColor="white"
               buttonType="pay"
               buttonLocale="id"
-
+             
               
             />
 

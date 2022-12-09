@@ -5,16 +5,18 @@ import { MdOutlineAddShoppingCart } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
 import { Helmet } from 'react-helmet';
 
+import { ThemeContext } from "../context/ThemeContext";
+
 const DetailPage = ({ products, onAddHandler }) => {
 
     let { id } = useParams();
     const product = products[(id-1)];
-
     const { product_name, product_img, product_desc, product_price, product_ctg } = product;
+    const { theme } = React.useContext(ThemeContext);
 
     return (
-        <>
-            <div className="detail-page">
+        <div style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
+            <div className="detail-page" >
                 <Helmet>
                     <title>Herbal.in - {id}, {product_name}</title>
                 </Helmet>
@@ -38,7 +40,7 @@ const DetailPage = ({ products, onAddHandler }) => {
                  <p className="detail-page__desc"> {product_desc}</p>
             </div>
             
-        </>
+        </div>
     )
 }
 

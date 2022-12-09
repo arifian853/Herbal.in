@@ -8,12 +8,16 @@ import { Link } from "react-router-dom";
 import CurrencyFormat from "react-currency-format";
 import { Footer } from "../components/Footer";
 
+import { ThemeContext } from "../context/ThemeContext";
+
 const HomePage = ({ onAddHandler }) => {
   const productsOffer = getProdOffers();
 
+  const { theme } = React.useContext(ThemeContext);
+
   return (
-    <div className="home-page">
-      <div className="home-page__banner">
+    <div className="home-page" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
+      <div className="home-page__banner" >
         <h1>Herbal.in</h1>
         <p>Herbal medicines are natural botanical products that derived from plants. Herbal medicines can help treat a variety of conditions, and in some cases, may have fewer side effects than some conventional medications. They are sold as tablets, capsules, powders, teas, extracts, and fresh or dried plants. </p>
         <p>Are you ready to see how herbal medicines can work for you ? <span className="home-page__banner-italicText">Grab it now ! </span><span className="home-page__banner-boldText">Because your health matters.</span></p>

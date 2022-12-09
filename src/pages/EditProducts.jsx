@@ -8,6 +8,7 @@ import { Footer } from "../components/Footer";
 
 const EditProducts = ({ productItems, onAddHandler, keyword, keywordChange, selectedFilter, setSelectedFilter, loading, id, onDeleteHandler }) => {
 
+ 
     const searchProducts = productItems.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
     const ctgFilteredProducts = productItems.filter((productItem) => productItem.product_ctg === selectedFilter);
     const searchFilteredProducts = ctgFilteredProducts.filter((productItem) => productItem.product_name.toLowerCase().includes(keyword.toLowerCase())); 
