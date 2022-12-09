@@ -18,6 +18,7 @@ import { SecureRoute } from "./components/SecureRoute";
 import { AdminLogin } from "./pages/AdminLogin";
 import { Editing } from "./pages/Editing";
 import CheckoutPage from "./pages/CheckoutPage";
+import OrderReceivedPage from "./pages/OrderReceivedPage";
 
 import EditArticles from "./pages/EditArticles";
 import AddArticles from "./pages/AddArticles";
@@ -168,6 +169,9 @@ function App() {
                         } />
                         {/* Checkout Page */}
                         <Route path="/checkout" element={<CheckoutPage cartItems={cartItems} setCartItems={setCartItems} />} />
+
+                         {/* Order Received Page */}
+                        <Route path="/order-received" element={<OrderReceivedPage />} />
 
                         {/* Not Found Page */}
                         <Route path="*" element={<NotFoundPage />} />

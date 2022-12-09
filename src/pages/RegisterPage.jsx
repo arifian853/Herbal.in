@@ -50,9 +50,9 @@ export const RegisterPage = () => {
                 <form onSubmit={handleSubmit}>
                     <Toaster />
                     <label>Email</label><br />
-                    <input className='input-column' type="email" name="" id="" placeholder='Masukkan Email' onChange={(e) => setEmail(e.target.value)}/><br /> <br />
+                    <input className='input-column' type="email" name="email" id="email" placeholder='Masukkan Email' onChange={(e) => setEmail(e.target.value)}/><br /> <br />
                     <label>Kata Sandi</label>
-                    <input className='input-column'  type="password" name="" id="" placeholder='Masukkan Kata Sandi' onChange={(e) => setPassword(e.target.value)}/>
+                    <input className='input-column'  type="password" name="password" id="password" placeholder='Masukkan Kata Sandi' onChange={(e) => setPassword(e.target.value)}/>
                     <br /> <br />
                     <button className='btn-login-register'>Daftar</button>
                     <p>Sudah memiliki akun ? <Link to="/login"><span className='green-text-link'><u>Login disini</u></span></Link></p>

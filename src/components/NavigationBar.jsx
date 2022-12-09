@@ -63,7 +63,7 @@ const Navigation = ({ cartItems }) => {
 }
 
 Navigation.propTypes = {
-    logout: PropTypes.func.isRequired,
+    logout: PropTypes.func,
 }
 
 export default Navigation;
