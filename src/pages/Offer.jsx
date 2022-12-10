@@ -36,12 +36,10 @@ export const Offer = (slide) => {
           <div></div>
           <div className="slideStyles" style={slideStylesWidthBackground}>
             <div onClick={goToPrevious} className="leftArrowStyles">
-              <br />
-              <br />❰
+              ❰
             </div>
             <div onClick={goToNext} className="rightArrowStyles">
-              <br />
-              <br />❱
+              ❱
             </div>
           </div>
           <div className="dotsContainerStyles">
