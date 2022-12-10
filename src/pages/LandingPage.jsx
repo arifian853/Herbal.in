@@ -21,7 +21,7 @@ export const LandingPage = () => {
       <div className="main" id="home">
         <div className="left-landing">
           <div className="greeting">
-            <img src="../images/leaf.png" alt="Logo Herbal.in" />
+            <img src="../Assets/leaf.png" alt="Logo Herbal.in" />
             <h1>Selamat Datang di Herbal.in !</h1>
             <p>Temukan obat - obatan herbal terbaik dari seluruh Indonesia disini</p>
           </div>

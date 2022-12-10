@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 export const Offer = (slide) => {
   const slides = [
-    { url: 'obat1.png', title: '1' },
-    { url: 'obat2.png', title: '2' },
-    { url: 'obat3.png', title: '3' },
-    { url: 'obat4.png', title: '4' },
-    { url: 'obat5.png', title: '5' },
+    { url: '../Assets/obat1.png', title: '1' },
+    { url: '../Assets/obat2.png', title: '2' },
+    { url: '../Assets/obat3.png', title: '3' },
+    { url: '../Assets/obat4.png', title: '4' },
+    { url: '../Assets/obat5.png', title: '5' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

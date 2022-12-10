@@ -5,7 +5,7 @@ export const Teams = () => {
     <div className="teams">
       <h1 className="box-model1">Our Teams</h1>
       <section className="kolomprofil">
-        <img className="profil" src="../Assets/IMG_20221129_173125.jpg" alt="profile" />
+        <img className="profil" src="../Assets/Foto_Arifian.jpg" alt="profile" />
 
         <div className="kata">
           <p>Arifian Saputra</p>
@@ -47,7 +47,7 @@ export const Teams = () => {
         </div>
       </section>
       <section className="kolomprofil">
-        <img className="profil" src="../Assets/WhatsApp Image 2022-12-07 at 12.50.25.jpeg" alt="profile" />
+        <img className="profil" src="../Assets/Foto_Vanessa.jpeg" alt="profile" />
         <div className="kata">
           <p>Vanessa Leonora</p>
           <p>
@@ -68,7 +68,7 @@ export const Teams = () => {
         </div>
       </section>
       <section className="kolomprofil">
-        <img className="profil" src="../Assets/WhatsApp Image 2022-12-06 at 11.19.41.jpeg" alt="profile" />
+        <img className="profil" src="../Assets/Foto_Yusril.jpeg" alt="profile" />
         <div className="kata">
           <p>Yusril Ramadhan</p>
           <p>Halo, aku Yusril Ramadhan. Boleh dipanggil Yusril. Aku saat ini berkuliah di Universitas Telkom.</p>

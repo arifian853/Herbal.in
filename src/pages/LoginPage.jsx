@@ -38,7 +38,7 @@ export const LoginPage = () => {
             <div className="greeting-login">
                 <h1>Selamat Datang Kembali !</h1>
                 <br />
-                <img src="../images/leaf.png" alt="" /> 
+                <img src="../Assets/leaf.png" alt="" /> 
             </div>
         </div>
         <div className="right-side-login">
