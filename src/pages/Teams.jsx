@@ -72,7 +72,7 @@ export const Teams = () => {
         <img className="profil" src="../Assets/Foto_Yusril.jpeg" alt="profile" />
         <div className="kata">
           <p>Yusril Ramadhan</p>
-          <p>Halo, nama aku Yusril Ramadhan. Boleh dipanggil Yusril. Aku saat ini sedang berkuliah di Universitas Telkom di Jurusan Informatika. Sekarang sedang berfokus di bidang Front-End Web Development. Salam kenal !</p>
+          <p>Halo, nama aku Yusril Ramadhan. Boleh dipanggil Yusril. Aku saat ini sedang berkuliah di Universitas Telkom di Jurusan Informatika. Sekarang sedang berfokus di bidang Front-End Web Development.</p>
           <p>Salam Kenal !!!</p>
         </div>
         <div className="icon">
