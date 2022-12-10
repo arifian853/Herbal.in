@@ -38,7 +38,7 @@ const Navigation = ({ cartItems }) => {
 
   return (
     <nav className="navigation">
-      <p>Herbal.In</p>
+      <p className="logo_name">Herbal.in</p>
 
       <div className="navigation-bar">
         <Link to="/home">
