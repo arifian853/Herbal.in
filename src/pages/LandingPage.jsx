@@ -35,9 +35,7 @@ export const LandingPage = () => {
             <button>Selengkapnya</button>
           </Link>
           <br /> <br />
-          <Link to="/admin-herbalin-login">
-            <button>ADMIN</button>
-          </Link>
+          
         </div>
       </div>
 
@@ -51,7 +49,7 @@ export const LandingPage = () => {
 
       <div className="About" id="contact"></div>
       <Teams />
-      <p className="footer-landing">Copyright © 2022 Herbal.in - C22-05</p>
+      <p className="footer-landing">Copyright © 2022 Herbal.in - C22-05 | <Link to="/admin-herbalin-login"> <p>Admin Login </p></Link></p>
     </div>
   );
 };

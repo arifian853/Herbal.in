@@ -12,6 +12,7 @@
   .left-landing {
     padding-top: 20%;
     font-size: small;
+    width: 100%;
   }
 
   .left-landing img {
@@ -43,6 +44,7 @@
   .right-landing {
     padding-left: 5%;
     padding-top: 70%;
+    width: 100%;
   }
 
   .right-landing button {

@@ -67,11 +67,12 @@ export const Teams = () => {
           </a>
         </div>
       </section>
+
       <section className="kolomprofil">
         <img className="profil" src="../Assets/Foto_Yusril.jpeg" alt="profile" />
         <div className="kata">
           <p>Yusril Ramadhan</p>
-          <p>Halo, aku Yusril Ramadhan. Boleh dipanggil Yusril. Aku saat ini berkuliah di Universitas Telkom.</p>
+          <p>Halo, nama aku Yusril Ramadhan. Boleh dipanggil Yusril. Aku saat ini sedang berkuliah di Universitas Telkom di Jurusan Informatika. Sekarang sedang berfokus di bidang Front-End Web Development. Salam kenal !</p>
           <p>Salam Kenal !!!</p>
         </div>
         <div className="icon">
@@ -86,6 +87,7 @@ export const Teams = () => {
           </a>
         </div>
       </section>
+      
     </div>
   );
 };
